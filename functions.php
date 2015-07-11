@@ -19,8 +19,16 @@ function btwp_enqueue_scripts() {
 /*--------------------------------------------------------------
 	HABILITANDO IMAGENS DESTACADAS
 --------------------------------------------------------------*/
-add_image_size('post-thumb', 300, 225, true);
 add_theme_support('post-thumbnails');
+add_image_size('post-thumb', 300, 225, true);
+
+/*--------------------------------------------------------------
+	ALTERA A QUANTIDADE DE CARACTERES DO RESUMO
+--------------------------------------------------------------*/
+function alteraTamanhoResumo($length) {
+	return 40;
+}
+add_filter('excerpt_length', 'alteraTamanhoResumo');
 
 /*--------------------------------------------------------------
 	CRIANDO PAGINAÇÃO
