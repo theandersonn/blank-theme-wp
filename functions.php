@@ -1,6 +1,14 @@
 <?php
 
 /*--------------------------------------------------------------
+	INSERE FAVICON
+--------------------------------------------------------------*/
+function blog_favicon() {
+echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_stylesheet_directory_uri().'/assets/images/favicon.ico" />';
+}
+add_action('wp_head', 'blog_favicon');
+
+/*--------------------------------------------------------------
 	CARREGANDO ESTILOS E SCRIPTS
 --------------------------------------------------------------*/
 add_action('wp_enqueue_scripts', 'btwp_enqueue_scripts');
