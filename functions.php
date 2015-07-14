@@ -3,10 +3,10 @@
 /*--------------------------------------------------------------
 	INSERE FAVICON
 --------------------------------------------------------------*/
-function blog_favicon() {
+function site_favicon() {
 echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_stylesheet_directory_uri().'/assets/images/favicon.ico" />';
 }
-add_action('wp_head', 'blog_favicon');
+add_action('wp_head', 'site_favicon');
 
 /*--------------------------------------------------------------
 	CARREGANDO ESTILOS E SCRIPTS
