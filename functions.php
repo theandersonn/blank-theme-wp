@@ -76,4 +76,8 @@ function wp_pagination($pages = '', $range = 9)
     if ( !empty($wp_query->query_vars['s']) ) $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
     echo '<div class="wp_pagination">'.paginate_links( $pagination ).'</div>';
 }
+
+// Customiza o painel de login -> Logo, Título e url
+require get_template_directory() . '/inc/customiza-login.php';
+
 ?>
