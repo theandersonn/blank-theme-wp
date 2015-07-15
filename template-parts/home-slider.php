@@ -1,5 +1,15 @@
-<div id="owl-demo" class="owl-carousel owl-theme">
-     <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/thumb-slider-1.jpg" alt="Job 1"></div>
-     <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/thumb-slider-1.jpg" alt="Job 1"></div>
-     <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/thumb-slider-1.jpg" alt="Job 1"></div>
+<div id="owl-single" class="owl-carousel owl-theme">
+    <?php
+        $slider = new WP_query(
+            array(
+                'category_name' => 'slider',
+                'posts_per_page' => 3
+            )
+        );
+            while( $slider->have_posts() ) : $slider->the_post();
+     ?>
+                <div class="item">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+            <?php endwhile; ?>
 </div>
