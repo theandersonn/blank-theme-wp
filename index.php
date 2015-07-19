@@ -3,8 +3,8 @@
 <!-- CONTEÚDO SITE -->
 <main>
 
-	<?php get_template_part('template-parts/loop', 'main'); ?>
-	
+	<?php get_template_part('partials/loop', 'main'); ?>
+
 </main>
 
 <?php get_footer(); ?>
