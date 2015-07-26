@@ -20,6 +20,12 @@ echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_stylesheet_direc
 add_action('wp_head', 'site_favicon');
 
 /*--------------------------------------------------------------
+	Bloqueia a exibição da versão do WordPress
+ --------------------------------------------------------------*/
+ remove_action( 'wp_head', 'wp_generator' );
+
+
+/*--------------------------------------------------------------
 	CARREGANDO ESTILOS E SCRIPTS
 --------------------------------------------------------------*/
 add_action('wp_enqueue_scripts', 'btwp_enqueue_scripts');
