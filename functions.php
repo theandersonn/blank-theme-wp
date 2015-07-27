@@ -86,6 +86,17 @@ function wp_pagination($pages = '', $range = 9)
     echo '<div class="wp_pagination">'.paginate_links( $pagination ).'</div>';
 }
 
+/*--------------------------------------------------------------
+	Insere Google Analytics no Footer
+--------------------------------------------------------------*/
+add_action('wp_footer', 'btwp_googleanalytics');
+
+function btwp_googleanalytics() { ?>
+
+	<!-- INSERIR SCRIPT AQUI -->
+
+<?php }
+
 // Customiza o painel de login -> Logo, Título e url
 require get_template_directory() . '/inc/customiza-login.php';
 
