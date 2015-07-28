@@ -100,4 +100,7 @@ function btwp_googleanalytics() { ?>
 // Customiza o painel de login -> Logo, Título e url
 require get_template_directory() . '/inc/customiza-login.php';
 
+// Altera o tamanho do resumo do texto
+require get_template_directory() . 'inc/change-size-text.php';
+
 ?>
