@@ -25,7 +25,7 @@ function changeSizeText($str, $n = 500, $end_char = '&#8230;'){
 
 /* Exemplo de uso
 <?php $resumoNoticias = get_the_excerpt();
-echo character_limiter( $resumoNoticias, 70 );
+echo changeSizeText( $resumoNoticias, 70 );
 ?>
 */
 
