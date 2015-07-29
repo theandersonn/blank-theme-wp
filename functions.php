@@ -97,6 +97,20 @@ function btwp_googleanalytics() { ?>
 
 <?php }
 
+/*--------------------------------------------------------------
+	Registra Sidebars
+--------------------------------------------------------------*/
+//Barra Lateral
+register_sidebar(
+    array(
+    'name' => 'Barra lateral',
+    'id' => 'barra-lateral',
+    'before_widget' => '<div class="nome-estilo">',
+    'after_widget' => '</div>',
+    'description' => 'Widgets nesta área serão exibidos na barra lateral'
+    )
+);
+
 // Customiza o painel de login -> Logo, Título e url
 require get_template_directory() . '/inc/customiza-login.php';
 
