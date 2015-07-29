@@ -4,6 +4,6 @@
 	<p><?php the_content(); ?></p>
 <?php endwhile; ?>
 
-<?php else: ?>
+<?php else : ?>
 	<p>Não temos posts publicados</p>
 <?php endif; ?>
