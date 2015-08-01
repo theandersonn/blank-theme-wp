@@ -60,14 +60,6 @@ add_image_size('small', 120, '', true); // Small Thumbnail
 add_image_size('custom-size', 700, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
 /*--------------------------------------------------------------
-	ALTERA A QUANTIDADE DE CARACTERES DO RESUMO
---------------------------------------------------------------*/
-function alteraTamanhoResumo($length) {
-	return 40;
-}
-add_filter('excerpt_length', 'alteraTamanhoResumo');
-
-/*--------------------------------------------------------------
 	CRIANDO PAGINAÇÃO
 --------------------------------------------------------------*/
 function wp_pagination($pages = '', $range = 9)
