@@ -34,6 +34,7 @@ function btwp_enqueue_scripts() {
 
 	// Carrega os estilos do tema
 	wp_enqueue_style('site-css', get_stylesheet_directory_uri() . '/assets/css/site.css');
+	wp_enqueue_style('grid-css', get_stylesheet_directory_uri() . '/assets/css/grid.css');
 	wp_enqueue_style('reset-css', get_stylesheet_directory_uri() . '/assets/css/reset.css');
 	wp_enqueue_style('media-queries-css', get_stylesheet_directory_uri() . '/assets/css/media-queries.css');
 

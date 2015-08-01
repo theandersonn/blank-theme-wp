@@ -1,0 +1,40 @@
+.container{
+	margin: 0 auto;
+	width: 960px;
+}
+
+.row{
+	margin-bottom:20px;
+	clear:both;
+	*overflow: hidden;
+}
+
+.row:after{
+	content:".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+}
+
+.alpha{
+	margin-left:24px;
+	float:left;
+	*display:inline;/* para o  ie 7 */
+}
+
+.row .alpha:first-child { margin-left:0; }
+
+.col-1 { width: 58px; }
+.col-2 { width: 140px; }
+.col-3 { width: 222px; }
+.col-4 { width: 304px; }
+.col-5 { width: 386px; }
+.col-6 { width: 468px; }
+.col-7 { width: 550px; }
+.col-8 { width: 632px; }
+.col-9 { width: 714px; }
+.col-10{ width: 796px; }
+.col-11{ width: 878px; }
+.col-12{ width: 960px; }
