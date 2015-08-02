@@ -59,53 +59,17 @@ add_image_size('medium', 250, '', true); // Medium Thumbnail
 add_image_size('small', 120, '', true); // Small Thumbnail
 add_image_size('custom-size', 700, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
-/*--------------------------------------------------------------
-	CRIANDO PAGINAÇÃO
---------------------------------------------------------------*/
-function wp_pagination($pages = '', $range = 9)
-{
-    global $wp_query, $wp_rewrite;
-    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-    $pagination = array(
-        'base' => @add_query_arg('page','%#%'),
-        'format' => '',
-        'total' => $wp_query->max_num_pages,
-        'current' => $current,
-        'show_all' => true,
-        'type' => 'plain'
-    );
-    if ( $wp_rewrite->using_permalinks() ) $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
-    if ( !empty($wp_query->query_vars['s']) ) $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-    echo '<div class="wp_pagination">'.paginate_links( $pagination ).'</div>';
-}
+// Insere Paginação
+require get_template_directory() . '/inc/insert-pagination.php';
 
-/*--------------------------------------------------------------
-	Insere Google Analytics no Footer
---------------------------------------------------------------*/
-add_action('wp_footer', 'btwp_googleanalytics');
+// Insere Google Analytics no Footer
+require get_template_directory() . '/inc/insert-googleanalytics.php';
 
-function btwp_googleanalytics() { ?>
-
-	<!-- INSERIR SCRIPT AQUI -->
-
-<?php }
-
-/*--------------------------------------------------------------
-	Registra Sidebars
---------------------------------------------------------------*/
-//Barra Lateral
-register_sidebar(
-    array(
-    'name' => 'Barra lateral',
-    'id' => 'barra-lateral',
-    'before_widget' => '<div class="nome-estilo">',
-    'after_widget' => '</div>',
-    'description' => 'Widgets nesta área serão exibidos na barra lateral'
-    )
-);
+// Regista Sidebars
+require get_template_directory() . '/inc/register-sidebar.php';
 
 // Customiza o painel de login -> Logo, Título e url
-require get_template_directory() . '/inc/customiza-login.php';
+require get_template_directory() . '/inc/customize-login.php';
 
 // Altera o tamanho do resumo do texto
 require get_template_directory() . '/inc/change-size-text.php';
