@@ -3,11 +3,8 @@
  //	Bloqueia a exibição da versão do WordPress
  remove_action( 'wp_head', 'wp_generator' );
 
- // Cria a action Init e Registra Menus
- require get_template_directory() . '/inc/register-menus.php';
-
  // Insere Favicon
- require get_template_directory() . '/inc/adding-favicon.php';
+require get_template_directory() . '/inc/adding-favicon.php';
 
 // Carrega Scripts e Estilos
 require get_template_directory() . '/inc/adding-scripts-style.php';
@@ -20,6 +17,12 @@ require get_template_directory() . '/inc/insert-pagination.php';
 
 // Insere Google Analytics no Footer
 require get_template_directory() . '/inc/insert-googleanalytics.php';
+
+// Cria a action Init e Registra Menus
+require get_template_directory() . '/inc/register-menus.php';
+
+// Regista Post Types e Taxonomias
+require get_template_directory() . '/inc/register-post-types-taxonomies.php';
 
 // Regista Sidebars
 require get_template_directory() . '/inc/register-sidebar.php';
