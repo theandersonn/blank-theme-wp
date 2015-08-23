@@ -21,14 +21,14 @@ define ('WPCF7_AUTOP', false );
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
 // Loop customizado com WP_Query
-$nome-slug = new WP_Query(
+$nomeSlug = new WP_Query(
 	array(
 		'posts_per_page' => '3',
-		'category_name' => 'nome-slug'
+		'category_name' => 'nomeCategoria'
 	)
 );
 
-<?php if( $nome-slug->have_posts() ) : while( $nome-slug->have_posts() ) : $nome-slug->the_post(); ?>
+<?php if( $nomeSlug->have_posts() ) : while( $nomeSlug->have_posts() ) : $nomeSlug->the_post(); ?>
 
 // Aqui Template tags
 
