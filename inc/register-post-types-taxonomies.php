@@ -1,6 +1,6 @@
 <?php
 
-// Registra Post Type -> Portfólio
+// Registra Post Type -> Portfólio (EXEMPLO)
 function btwp_register_post_types_portifolio(){
 	register_post_type('portfolio',
 		array(
@@ -21,7 +21,7 @@ function btwp_register_post_types_portifolio(){
 	);
 }
 
-// Registra Taxonomias -> Portfólio
+// Registra Taxonomias -> Portfólio (EXEMPLO)
 function btwp_register_taxonomies(){
 	register_taxonomy('portfolio-categoria', 'portfolio',
 		array(
