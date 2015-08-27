@@ -13,6 +13,10 @@ function btwp_enqueue_scripts() {
 	wp_enqueue_style('reset-css', get_stylesheet_directory_uri() . '/assets/css/reset.css');
 	wp_enqueue_style('media-queries-css', get_stylesheet_directory_uri() . '/assets/css/media-queries.css');
 
+	// Carrega fontes do google
+	wp_register_style('btwp-googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
+	wp_enqueue_style( 'btwp-googleFonts');	
+
 	// Carrega os estilos do Owl Carousel
 	wp_enqueue_style('owl-carousel-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.carousel.css');
 	wp_enqueue_style('owl-theme-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.theme.css');
