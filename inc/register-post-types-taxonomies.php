@@ -1,14 +1,14 @@
 <?php
 
-// Registra Post Type -> Portfólio (EXEMPLO)
-function btwp_register_post_types_portifolio(){
-	register_post_type('portfolio',
+// Registra Post Type -> SLIDER
+function btwp_register_post_types_slider(){
+	register_post_type('slider',
 		array(
 			'labels' => array(
-				'name' => 'Portfólio',
-				'singular_name' => 'Portfólio',
-				'add_new' => 'Adicionar Trabalho',
-				'edit_item' => 'Editar Trabalho'
+				'name' => 'Slider',
+				'singular_name' => 'Slider',
+				'add_new' => 'Adicionar Slider',
+				'edit_item' => 'Editar Slider'
 			),
 			'public' => true,
 			'has_archive' => true,
@@ -21,12 +21,12 @@ function btwp_register_post_types_portifolio(){
 	);
 }
 
-// Registra Taxonomias -> Portfólio (EXEMPLO)
+// Registra Taxonomias -> SLIDER
 function btwp_register_taxonomies(){
-	register_taxonomy('portfolio-categoria', 'portfolio',
+	register_taxonomy('slider-categoria', 'slider',
 		array(
 			'labels' => array(
-				'name' => 'Categoria de Portfólio',
+				'name' => 'Categoria de Slider',
 				'menu_name' => 'Categorias'
 			),
 			'public' => true,

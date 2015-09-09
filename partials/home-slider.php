@@ -1,9 +1,10 @@
+<!-- SLIDER -->
 <div id="owl-single" class="owl-carousel owl-theme">
     <?php
         $slider = new WP_query(
             array(
-                'category_name' => 'slider',
-                'posts_per_page' => 3
+                'post_type' => 'slider',
+                'posts_per_page' => -1
             )
         );
             while( $slider->have_posts() ) : $slider->the_post();

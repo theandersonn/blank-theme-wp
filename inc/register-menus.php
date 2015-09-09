@@ -7,8 +7,8 @@ add_action('init', 'btwp_init');
 function btwp_init() {
 	//Registra menus
 	btwp_register_menus();
-	//Registra Post Types (EXEMPLO)
-	btwp_register_post_types_portifolio();
+	//Registra Post Types (SLIDER)
+	btwp_register_post_types_slider();
 	//Registra Taxonomias
 	btwp_register_taxonomies();
 }
