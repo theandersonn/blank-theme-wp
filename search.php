@@ -1,9 +1,12 @@
 <?php get_header(); ?>
 
-<h2 class="tt-noticias-do-setor">Resultado da busca pelo termo '<?php echo esc_html ( get_query_var('s') ); ?>'</h2>
+<h2>
+    Resultado da busca pelo termo '<?php echo esc_html ( get_query_var('s') ); ?>'
+</h2>
 
 <!-- aqui loop de posts -->
 
-<!-- aqui painação -->
+<!-- obter paginação -->
+<?php wp_pagination();?>
 
 <?php get_footer(); ?>
