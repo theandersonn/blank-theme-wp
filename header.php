@@ -20,5 +20,5 @@
 
     <!-- TOPO MENU -->
     <menu>
-        <?php get_template_part('template-parts/menu','topo')?>
+        <?php get_template_part('partials/menu','topo')?>
     </menu>
