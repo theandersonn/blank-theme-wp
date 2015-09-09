@@ -4,6 +4,7 @@
         $slider = new WP_query(
             array(
                 'post_type' => 'slider',
+                'term' => 'slider-home', // Crie a Categoria Slider Home
                 'posts_per_page' => -1
             )
         );
