@@ -13,5 +13,3 @@ register_sidebar(
     'description' => 'Widgets nesta área serão exibidos na barra lateral'
     )
 );
-
-?>

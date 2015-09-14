@@ -10,5 +10,3 @@ function btwp_googleanalytics() { ?>
 	<!-- INSERIR SCRIPT AQUI -->
 
 <?php }
-
-?>

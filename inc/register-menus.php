@@ -16,5 +16,3 @@ function btwp_init() {
 function btwp_register_menus() {
 	register_nav_menu('menu-primario', 'Menu Principal ( Topo )');
 }
-
-?>

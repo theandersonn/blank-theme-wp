@@ -34,5 +34,3 @@ function btwp_register_taxonomies(){
 		)
 	);
 }
-
-?>

@@ -37,5 +37,3 @@ add_filter('login_headertitle', 'altera_admin_titulo');
 function altera_admin_titulo(){
 	return get_option('blogname');
 }
-
-?>

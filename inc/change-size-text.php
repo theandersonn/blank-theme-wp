@@ -28,5 +28,3 @@ function changeSizeText($str, $n = 500, $end_char = '&#8230;'){
 echo changeSizeText( $resumoNoticias, 70 );
 ?>
 */
-
-?>
