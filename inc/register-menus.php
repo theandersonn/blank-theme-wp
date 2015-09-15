@@ -1,30 +1,41 @@
 <?php
-
 /*--------------------------------------------------------------
 	CRIAÇÃO DA ACTION INIT E REGISTRO DE MENUS
 --------------------------------------------------------------*/
-add_action('init', 'btwp_init');
-function btwp_init() {
-	//Registra Post Types (SLIDER)
-	btwp_register_post_types_slider();
-	//Registra Taxonomias
-	btwp_register_taxonomies();
+add_action('init', 'btwp_init_menu');
+function btwp_init_menu() {
+	//Registra menus
+	register_nav_menu('menu-primario', 'Menu Principal ( Topo )');
+	register_nav_menu('menu-mobile', 'Menu mobile');
 }
 
 /*--------------------------------------------------------------
-	REGISTRO DE MENUS
+	EXIBE OS MENUS
 --------------------------------------------------------------*/
-function nav_principal(){
-	wp_nav_menu(
-	    array(
-	        /* identificação do menu */
-	        'theme-location' => 'menu-primario',
-	        /* remove container gerado pelo WP */
-	        'container' => '',
-	        /* aplica estilo feito para o menu */
-	        'menu_class' => ''
-	    )
-	);
+function menu_principal(){
+    wp_nav_menu(
+        array(
+            /* identificação do menu */
+            'theme_location' => 'menu-primario',
+            /* remove container gerado pelo WP */
+            'container' => false,
+            /* aplica estilo feito para o menu */
+            'menu_class' => ''
+
+        )
+    );
 }
 
-register_nav_menu('menu-primario', 'Menu Principal ( Topo )');
+function menu_principal_mobile(){
+    wp_nav_menu(
+        array(
+            /* identificação do menu */
+            'theme_location' => 'menu-primario-mobile',
+            /* remove container gerado pelo WP */
+            'container' => false,
+            /* aplica estilo feito para o menu */
+            'menu_class' => ''
+
+        )
+    );
+}
