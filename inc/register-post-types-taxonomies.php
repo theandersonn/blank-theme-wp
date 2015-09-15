@@ -1,4 +1,14 @@
 <?php
+/*--------------------------------------------------------------
+	CRIAÇÃO DA ACTION INIT E REGISTRO DE TAXONOMIAS
+--------------------------------------------------------------*/
+add_action('init', 'btwp_init_post_type_taxonomies');
+function btwp_init_post_type_taxonomies() {
+	//Registra as taxonomias
+	btwp_register_taxonomies();
+	//Registra Post Types (SLIDER)
+	btwp_register_post_types_slider();
+}
 
 // Registra Post Type -> SLIDER
 function btwp_register_post_types_slider(){
