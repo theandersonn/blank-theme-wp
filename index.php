@@ -3,8 +3,11 @@
 <!-- CONTEÚDO SITE -->
 <main>
 
-	<!-- CHAMADA DE COMPONENTES DA HOME -->
-	<?php get_template_part('partials/loop', 'main'); ?>
+	<!-- CHAMADA DO MENU PRINCIPAL -->
+	<?php nav_principal(); ?>
+
+	<!-- CHAMADA DO MENU MOBILE -->
+	<?php menu_principal_mobile(); ?>
 
 </main>
 
