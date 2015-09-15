@@ -5,7 +5,7 @@
 add_action('init', 'btwp_init_post_type_taxonomies');
 function btwp_init_post_type_taxonomies() {
 	//Registra as taxonomias
-	btwp_register_taxonomies();
+	btwp_register_taxonomies_slider();
 	//Registra Post Types (SLIDER)
 	btwp_register_post_types_slider();
 }
@@ -32,7 +32,7 @@ function btwp_register_post_types_slider(){
 }
 
 // Registra Taxonomias -> SLIDER
-function btwp_register_taxonomies(){
+function btwp_register_taxonomies_slider(){
 	register_taxonomy('slider-categoria', 'slider',
 		array(
 			'labels' => array(
