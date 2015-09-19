@@ -1,7 +1,4 @@
 <?php
- // Insere Favicon
-require get_template_directory() . '/inc/adding-favicon.php';
-
 // Carrega Scripts e Estilos
 require get_template_directory() . '/inc/adding-scripts-style.php';
 
