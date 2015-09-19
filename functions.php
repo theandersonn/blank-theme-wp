@@ -45,6 +45,6 @@ require get_template_directory() . '/inc/customize-login.php';
 require get_template_directory() . '/inc/change-size-text.php';
 
 // Exibe Posts Populares
-require get_template_directory() . '/inc/set_post_views.php';
+require get_template_directory() . '/inc/set-post-views.php';
 
 ?>
