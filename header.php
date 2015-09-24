@@ -9,6 +9,7 @@
         <!--[if lt IE 9]>
     	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/html5.js"></script>
     	<![endif]-->
+        <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
 <body>
