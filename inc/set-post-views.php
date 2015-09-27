@@ -18,10 +18,7 @@ function wpb_set_post_views( $postID ) {
 // To keep the count accurate, lets get rid of prefetching
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-// Origin: http://www.wpbeginner.com/wp-tutorials/how-to-track-popular-posts-by-views-in-wordpress-without-a-plugin/
-
 // INSERT LOOP WORDPRESS
-
 //<?php
     //$popularPost = new WP_Query(
         //array(
@@ -29,7 +26,7 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
             //'posts_per_page' => '3',
             //'meta_key' => 'wpb_post_views_count',
             //'orderby' => 'meta_value_num',
-            //'order' => 'DESC'
+            //'order' => 'ASC'
         //)
     //);
 //?>
@@ -40,4 +37,4 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 <!-- INSERT LOOP WORDPRESS -->
 
-<?php //btwp_set_post_views(get_the_ID()); ?>
+<?php //wpb_set_post_views(get_the_ID()); ?>

@@ -1,15 +1,19 @@
 <?php
-// Carrega Scripts e Estilos
-require get_template_directory() . '/inc/adding-scripts-style.php';
 
-// Post Thumbnails
-require get_template_directory() . '/inc/post-thumbnails.php';
+// Altera o tamanho do resumo do texto
+require get_template_directory() . '/inc/change-size-text.php';
+
+// Customiza o painel de login -> Logo, Título e url
+require get_template_directory() . '/inc/customize-login-admin.php';
+
+// Insere Google Analytics no Footer
+require get_template_directory() . '/inc/insert-googleanalytics.php';
 
 // Insere Paginação
 require get_template_directory() . '/inc/insert-pagination.php';
 
-// Insere Google Analytics no Footer
-require get_template_directory() . '/inc/insert-googleanalytics.php';
+// Carrega Scripts e Estilos
+require get_template_directory() . '/inc/insert-scripts-style.php.php';
 
 // Cria a action Init e Registra Menus
 require get_template_directory() . '/inc/register-menus.php';
@@ -20,14 +24,11 @@ require get_template_directory() . '/inc/register-post-types-taxonomies.php';
 // Registra Sidebars
 require get_template_directory() . '/inc/register-sidebar.php';
 
-// Customiza o painel de login -> Logo, Título e url
-require get_template_directory() . '/inc/customize-login.php';
+// Remove lixo do head
+require get_template_directory() . '/inc/remove-junk-header.php';
 
-// Altera o tamanho do resumo do texto
-require get_template_directory() . '/inc/change-size-text.php';
+// Post Thumbnails
+require get_template_directory() . '/inc/set-post-thumbnails.php';
 
 // Exibe Posts Populares
 require get_template_directory() . '/inc/set-post-views.php';
-
-// Remove lixo do head
-require get_template_directory() . '/inc/remove-junk-header.php';
