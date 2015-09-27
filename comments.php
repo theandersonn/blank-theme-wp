@@ -1,43 +1,58 @@
-<?php
-/**
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-if ( post_password_required() ) {
-	return;
-}
-?>
-
-<div id="comments" class="comments-area">
-
+<div id="comments" class="mrg-l">
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'Um comentário em &ldquo;%2$s&rdquo;', '%1$s comentários em &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfifteen' ),
-					number_format_i18n( get_comments_number() ), get_the_title() );
-			?>
-		</h2>
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'avatar_size' => 56,
-				) );
-			?>
-		</ol><!-- .comment-list -->
+		<ul class="commentlist">
+			<?php wp_list_comments('avatar_size=76&type=comment&callback=mytheme_comment'); ?>
+	    </ul>
 
-	<?php endif; // have_comments() ?>
+		<?php if ($wp_query->max_num_pages > 1) : ?>
+			<div class="pagination">
+		    	<ul>
+		    		<li class="older"><?php previous_comments_link('Anteriores'); ?></li>
+		   			<li class="newer"><?php next_comments_link('Novos'); ?></li>
+		   		</ul>
+		    </div>
+	   	<?php endif; ?>
 
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php if ( comments_open() ) : ?>
 
-</div><!-- .comments-area -->
+		<div id="respond">
+			<h4 class="tt-comentarios">Deixe seu comentÃ¡rio</h4>
+
+			<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+
+				<?php if ( $user_ID ) : ?>
+
+					<p class="txt-comentarios">Autentificado como <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(); ?>" title="Sair desta conta">Sair desta conta &raquo;</a></p>
+
+					<textarea class="input" name="comment" id="comment" placeholder="ComentÃ¡rio..." rows="6" cols=""></textarea>
+		            <input type="submit" class="btn-home-publicacoes" value="Enviar comentÃ¡rio" />
+
+				<?php else : ?>
+
+					<div class="cf">
+						<label class="input-50">
+							<input class="input" type="text" name="author" id="author" placeholder="Nome" value="<?php echo $comment_author; ?>" />
+	                	</label>
+						<label class="input-50">
+							<input class="input" type="text" name="email" id="email" placeholder="Email" value="<?php echo $comment_author_email; ?>" />
+						</label>
+					</div>
+					<textarea class="input" name="comment" id="comment" placeholder="ComentÃ¡rio..." rows="6" cols=""></textarea>
+                	<input class="btn-home-publicacoes" type="submit" value="Enviar comentÃ¡rio" />
+
+                <?php endif; ?>
+
+
+                <?php comment_id_fields(); ?>
+                <?php do_action('comment_form', $post->ID); ?>
+
+	        </form>
+        	<p class="cancel"><?php cancel_comment_reply_link('Cancelar Resposta'); ?></p>
+		</div>
+	 <?php else : ?>
+		<h3>Os comentÃ¡rios estÃ£o fechados.</h3>
+<?php endif; ?>
+</div>
