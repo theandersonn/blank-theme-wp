@@ -12,8 +12,9 @@ function btwp_enqueue_scripts() {
 	wp_enqueue_style( 'btwp-googleFonts');
 
 	// Carrega os estilos do Owl Carousel
-	wp_enqueue_style('owl-carousel-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.carousel.css');
-	wp_enqueue_style('owl-theme-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.theme.css');
+	wp_enqueue_style('owl-carousel-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.carousel.min.css');
+	wp_enqueue_style('owl-theme-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.theme.default.min.css');
+	wp_enqueue_style('owl-theme-green-css', get_stylesheet_directory_uri() . '/assets/css/owl-carousel/owl.theme.green.min.css');
 
 	// Carrega os estilos do tema
 	wp_enqueue_style('site-css', get_stylesheet_directory_uri() . '/assets/css/site.css');
