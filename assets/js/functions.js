@@ -5,12 +5,17 @@ var funcoes = {
 
     sliderHome: function(){
         // SLIDER > OWL CAROUSEL
-        jQuery("#owl-single").owlCarousel({
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            autoPlay : true
-        });
+		jQuery('.owl-carousel').owlCarousel({
+		    loop:true,
+		    margin:10,
+		    nav:false,
+			autoPlay:true,
+		    responsive:{
+		        0:{
+		            items:1
+		        }
+		    }
+		})
     }
 }
 
