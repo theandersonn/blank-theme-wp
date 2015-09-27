@@ -53,6 +53,6 @@
         	<p class="cancel"><?php cancel_comment_reply_link('Cancelar Resposta'); ?></p>
 		</div>
 	 <?php else : ?>
-		<h3>Os comentÃ¡rios estÃ£o fechados.</h3>
+		<h3>Os comentários estão fechados.</h3>
 <?php endif; ?>
 </div>

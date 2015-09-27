@@ -9,6 +9,9 @@ require get_template_directory() . '/inc/customize-login-admin.php';
 // Insere Google Analytics no Footer
 require get_template_directory() . '/inc/insert-googleanalytics.php';
 
+// Insere Comentários
+require get_template_directory() . '/inc/insert-mytheme-comment.php';
+
 // Insere Paginação
 require get_template_directory() . '/inc/insert-pagination.php';
 
