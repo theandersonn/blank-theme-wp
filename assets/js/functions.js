@@ -6,14 +6,9 @@ var funcoes = {
     sliderHome: function(){
         // SLIDER > OWL CAROUSEL
 		jQuery('.owl-carousel').owlCarousel({
+			items:1,
 		    loop:true,
-		    margin:10,
-		    nav:false,
-			autoPlay:true,
-		    responsive:{
-		        0:{
-		            items:1
-		        }
+			autoPlay:true
 		    }
 		})
     }
