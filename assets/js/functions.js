@@ -3,13 +3,13 @@ var funcoes = {
 		this.sliderHome();
 	},
 
-    sliderHome: function(){
+	sliderHome: function(){
         // SLIDER > OWL CAROUSEL
 		jQuery('.owl-carousel').owlCarousel({
 			items:1,
 		    loop:true,
-			autoPlay:true
-		    }
+		    margin:10,
+			autoplay:true,
 		})
     }
 }
