@@ -17,7 +17,7 @@
     <?php endif; ?>
 
     <!-- obter paginação -->
-    <?php wp_pagination();?>
+    <?php get_template_part( 'partials/blog-paginacao' ); ?>
 </section>
 
 <?php get_footer(); ?>
