@@ -1,6 +1,7 @@
 var funcoes = {
 	init: function(){
 		this.sliderHome();
+		this.responsiveYouTube();
 	},
 
 	sliderHome: function(){
@@ -11,7 +12,14 @@ var funcoes = {
 		    margin:10,
 			autoplay:true,
 		})
-    }
+    },
+
+	responsiveYouTube: function(){
+		var all_oembed_videos = jQuery("iframe[src*='youtube'], iframe[src*='vimeo']");
+		all_oembed_videos.each(function() {
+			jQuery(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
+		});
+	}	
 }
 
 jQuery(function(){

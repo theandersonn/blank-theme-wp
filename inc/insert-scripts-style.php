@@ -22,6 +22,9 @@ function btwp_enqueue_scripts() {
 	wp_enqueue_style('reset-css', get_stylesheet_directory_uri() . '/assets/css/reset.css');
 	wp_enqueue_style('media-queries-css', get_stylesheet_directory_uri() . '/assets/css/media-queries.css');
 
+	//Carrega estilo da Função Responsive YouTube
+	wp_register_script('responsive-video-js', get_template_directory_uri() . '/responsive-video.js');
+
 	// Carrega jQuery nativo do WordPress
 	wp_enqueue_script('jquery');
 
