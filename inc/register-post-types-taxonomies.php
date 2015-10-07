@@ -40,7 +40,9 @@ function btwp_register_taxonomies_slider(){
 				'menu_name' => 'Categorias'
 			),
 			'public' => true,
-			'hierarchical' => true
+			'hierarchical' => true,
+			'show_in_quick_edit' => true,
+			'show_admin_column' => true			
 		)
 	);
 }
