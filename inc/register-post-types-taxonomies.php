@@ -22,6 +22,7 @@ function btwp_register_post_types_slider(){
 			),
 			'public' => true,
 			'has_archive' => true,
+			'menu_icon' => 'dashicons-images-alt2', // https://developer.wordpress.org/resource/dashicons/
 			'supports' => array(
 				'title',
 				'editor',
@@ -42,7 +43,7 @@ function btwp_register_taxonomies_slider(){
 			'public' => true,
 			'hierarchical' => true,
 			'show_in_quick_edit' => true,
-			'show_admin_column' => true			
+			'show_admin_column' => true
 		)
 	);
 }
