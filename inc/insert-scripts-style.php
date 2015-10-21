@@ -21,6 +21,7 @@ function btwp_enqueue_scripts() {
 	wp_enqueue_style('grid-css', get_stylesheet_directory_uri() . '/assets/css/grid.css');
 	wp_enqueue_style('reset-css', get_stylesheet_directory_uri() . '/assets/css/reset.css');
 	wp_enqueue_style('media-queries-css', get_stylesheet_directory_uri() . '/assets/css/media-queries.css');
+	wp_enqueue_style( 'style_print', get_stylesheet_directory_uri() . '/assets/css/print.css', ”, ”, 'print' );
 
 	//Carrega estilo da Função Responsive YouTube
 	wp_register_script('responsive-video-js', get_template_directory_uri() . '/responsive-video.js');
