@@ -38,6 +38,3 @@ require get_template_directory() . '/inc/remove-junk-header.php';
 
 // Post Thumbnails
 require get_template_directory() . '/inc/set-post-thumbnails.php';
-
-// Exibe Posts Populares
-require get_template_directory() . '/inc/set-post-views.php';
