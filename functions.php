@@ -19,7 +19,7 @@ require get_template_directory() . '/inc/insert-mytheme-comment.php';
 require get_template_directory() . '/inc/insert-pagination.php';
 
 // Carrega Scripts e Estilos
-require get_template_directory() . '/inc/insert-scripts-style.php.php';
+require get_template_directory() . '/inc/insert-scripts-style.php';
 
 // Insere Thumbnail em colunas do admin
 require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
