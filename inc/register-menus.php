@@ -5,18 +5,18 @@
 add_action('init', 'btwp_init_menu');
 function btwp_init_menu() {
 	//Registra menus
-	register_nav_menu('menu-primario', 'Menu Principal ( Topo )');
-	register_nav_menu('menu-mobile', 'Menu mobile');
+	register_nav_menu('nav-principal', 'Nav principal ( Topo )');
+	register_nav_menu('nav-mobile', 'Nav mobile');
 }
 
 /*--------------------------------------------------------------
 	EXIBE OS MENUS
 --------------------------------------------------------------*/
-function menu_principal(){
+function nav_principal(){
     wp_nav_menu(
         array(
             /* identificação do menu */
-            'theme_location' => 'menu-primario',
+            'theme_location' => 'nav-principal',
             /* remove container gerado pelo WP */
             'container' => false,
             /* aplica estilo feito para o menu */
@@ -26,11 +26,11 @@ function menu_principal(){
     );
 }
 
-function menu_principal_mobile(){
+function nav_mobile(){
     wp_nav_menu(
         array(
             /* identificação do menu */
-            'theme_location' => 'menu-primario-mobile',
+            'theme_location' => 'nav-mobile',
             /* remove container gerado pelo WP */
             'container' => false,
             /* aplica estilo feito para o menu */

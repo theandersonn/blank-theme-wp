@@ -8,7 +8,7 @@
 	<?php //nav_principal(); ?>
 
 	<!-- CHAMADA DO MENU MOBILE -->
-	<?php //menu_principal_mobile(); ?>
+	<?php //nav_mobile(); ?>
 
 </main>
 
