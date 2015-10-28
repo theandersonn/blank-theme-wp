@@ -2,12 +2,13 @@
 
 <!-- CONTEÚDO SITE -->
 <main>
+	MAIN
 
 	<!-- CHAMADA DO MENU PRINCIPAL -->
-	<!-- <?php nav_principal(); ?> -->
+	<?php //nav_principal(); ?>
 
 	<!-- CHAMADA DO MENU MOBILE -->
-	<!-- <?php menu_principal_mobile(); ?> -->
+	<?php //menu_principal_mobile(); ?>
 
 </main>
 
