@@ -6,7 +6,7 @@ var funcoes = {
 	},
 
 	imprimirPost: function(){
-		$('.btn-imprimir').click(function() {
+		jQuery('.btn-imprimir').click(function() {
 			window.print();
 			return false;
 		});
