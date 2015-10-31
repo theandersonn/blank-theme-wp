@@ -5,13 +5,6 @@ var funcoes = {
 		this.responsiveYouTube();
 	},
 
-	imprimirPost: function(){
-		jQuery('.btn-imprimir').click(function() {
-			window.print();
-			return false;
-		});
-	},
-
 	sliderHome: function(){
 		jQuery('.owl-carousel').owlCarousel({
 			items:1,
