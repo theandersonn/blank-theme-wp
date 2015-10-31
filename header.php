@@ -19,4 +19,9 @@
 	<!-- TOPO SITE -->
 	<header>
         HEADER
+    <!-- CHAMADA DO MENU PRINCIPAL -->
+    <?php //nav_principal(); ?>
+
+    <!-- CHAMADA DO MENU MOBILE -->
+    <?php //nav_mobile(); ?>
 	</header>
