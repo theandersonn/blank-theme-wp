@@ -1,5 +1,5 @@
 <!-- SLIDER -->
-<div class="owl-carousel owl-theme">
+<ul class="owl-carousel owl-theme">
     <?php
         $slider = new WP_query(
             array(
@@ -10,8 +10,8 @@
         );
             if( $slider->have_posts() ) : while( $slider->have_posts() ) : $slider->the_post();
      ?>
-                <div class="item">
+                <li class="item">
                     <?php the_post_thumbnail(); ?>
-                </div>
+                </li>
             <?php endwhile; endif; wp_reset_postdata(); ?>
-</div>
+</ul>
