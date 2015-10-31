@@ -1,7 +1,7 @@
 <?php
 
 // Ativa modo manutenção
-require get_template_directory() . '/inc/active-maintenace-mode.php';
+// require get_template_directory() . '/inc/active-maintenace-mode.php';
 
 // Altera o tamanho do resumo do texto
 require get_template_directory() . '/inc/change-size-text.php';
