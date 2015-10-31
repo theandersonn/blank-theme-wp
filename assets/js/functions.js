@@ -3,6 +3,7 @@ var funcoes = {
 		this.imprimirPost();
 		this.sliderHome();
 		this.responsiveYouTube();
+		this.removeAtributosImg();
 	},
 
 	sliderHome: function(){
@@ -19,7 +20,14 @@ var funcoes = {
 		all_oembed_videos.each(function(){
 			jQuery(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
 		});
-	}
+	},
+
+	removeAtributosImg: function(){
+		jQuery('img').each(function(){
+			jQuery(this).removeAttr('width')
+			jQuery(this).removeAttr('height');
+		});
+	},
 }
 
 jQuery(function(){
