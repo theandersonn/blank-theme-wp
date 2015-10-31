@@ -1,2 +1,2 @@
 # blank-theme-wp
-blank-theme-wp
+Blank Theme WP
