@@ -4,37 +4,37 @@
 // require get_template_directory() . '/inc/active-maintenace-mode.php';
 
 // Altera o tamanho do resumo do texto
-require get_template_directory() . '/inc/change-size-text.php';
+require get_template_directory() . '/functions/change-size-text.php';
 
 // Customiza o painel de login -> Logo, Título e url
-require get_template_directory() . '/inc/customize-login-admin.php';
+require get_template_directory() . '/functions/customize-login-admin.php';
 
 // Insere Google Analytics no Footer
-require get_template_directory() . '/inc/insert-googleanalytics.php';
+require get_template_directory() . '/functions/insert-googleanalytics.php';
 
 // Insere Comentários
-require get_template_directory() . '/inc/insert-mytheme-comment.php';
+require get_template_directory() . '/functions/insert-mytheme-comment.php';
 
 // Insere Paginação
-require get_template_directory() . '/inc/insert-pagination.php';
+require get_template_directory() . '/functions/insert-pagination.php';
 
 // Carrega Scripts e Estilos
-require get_template_directory() . '/inc/insert-scripts-style.php';
+require get_template_directory() . '/functions/insert-scripts-style.php';
 
 // Insere Thumbnail em colunas do admin
-require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
+require get_template_directory() . '/functions/insert-thumbnail-admin-columns.php';
 
 // Cria a action Init e Registra Menus
-require get_template_directory() . '/inc/register-menus.php';
+require get_template_directory() . '/functions/register-menus.php';
 
 // Registra Post Types e Taxonomias
-require get_template_directory() . '/inc/register-post-types-taxonomies.php';
+require get_template_directory() . '/functions/register-post-types-taxonomies.php';
 
 // Registra Sidebars
-require get_template_directory() . '/inc/register-sidebar.php';
+require get_template_directory() . '/functions/register-sidebar.php';
 
 // Remove lixo do head
-require get_template_directory() . '/inc/remove-junk-header.php';
+require get_template_directory() . '/functions/remove-junk-header.php';
 
 // Post Thumbnails
-require get_template_directory() . '/inc/set-post-thumbnails.php';
+require get_template_directory() . '/functions/set-post-thumbnails.php';
