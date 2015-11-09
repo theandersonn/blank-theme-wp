@@ -1,5 +1,6 @@
 <!-- SLIDER -->
-<ul class="owl-carousel owl-theme">
+<!-- SLIDER -->
+<ul class="owl-carousel">
     <?php
         $slider = new WP_query(
             array(
