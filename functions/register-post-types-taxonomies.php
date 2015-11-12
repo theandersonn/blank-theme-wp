@@ -47,3 +47,33 @@ function btwp_register_taxonomies_slider(){
 		)
 	);
 }
+
+/*--------------------------------------------------------------
+	MOSTRAR FILTRO POR TAXONOMIA NA LISTAGEM DOS POSTS
+--------------------------------------------------------------*/
+add_action( 'restrict_manage_posts', 'btwp_show_filter_taxonomy' );
+
+function btwp_show_filter_taxonomy() {
+	
+	global $typenow;
+	$taxonomy = 'slider-categoria';
+
+	if( $typenow == 'slider' ){
+		$filters = array($taxonomy);
+		
+		foreach ($filters as $tax_slug) {
+			$tax_obj = get_taxonomy($tax_slug);
+			$tax_name = $tax_obj->labels->name;
+			$terms = get_terms($tax_slug);
+		
+			echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
+			echo "<option value=''>Mostrar tudo</option>";
+		
+				foreach ($terms as $term) { 
+					echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>'; 
+				}
+		
+			echo "</select>";
+		}
+	}
+}
