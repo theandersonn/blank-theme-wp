@@ -1,17 +1,17 @@
 <?php
 
 /*--------------------------------------------------------------
-	ALTERA A LOGO DO PAINEL DE LOGIN
+	ALTERA LOGO DO PAINEL DE LOGIN
 --------------------------------------------------------------*/
-add_action('login_head',  'altera_admin_logo');
+add_action('login_head',  'btwp_change_admin_logo');
 
-function altera_admin_logo(){
+function btwp_change_admin_logo(){
     echo '<style  type="text/css">
 			h1 a{
-				background-image:url('.get_bloginfo('template_directory').'/assets/images/logo-blank-theme-wp.jpg)  !important;
-				width: 300px !important;
+				background-image:url('.get_bloginfo('template_directory').'/src/assets/images/logo-blank-theme-wp.jpg)  !important;
+				width: 100% !important;
 				height: 100px !important;
-				background-size: 300px !important;
+				background-size: 100% !important;
 			}
 		  .button-primary{
 			  background: #000 !important;
@@ -21,19 +21,19 @@ function altera_admin_logo(){
 }
 
 /*--------------------------------------------------------------
-	ALTERA A URL DO PAINEL DE LOGIN
+	ALTERA URL DO PAINEL DE LOGIN
 --------------------------------------------------------------*/
-add_filter('login_headerurl', 'altera_admin_url');
+add_filter('login_headerurl', 'btwp_change_admin_url');
 
-function altera_admin_url(){
+function btwp_change_admin_url(){
 	return get_bloginfo('url');
 }
 
 /*--------------------------------------------------------------
-	ALTERA O TÍTULO DO PAINEL DE LOGIN
+	ALTERA TÍTULO DO PAINEL DE LOGIN
 --------------------------------------------------------------*/
-add_filter('login_headertitle', 'altera_admin_titulo');
+add_filter('login_headertitle', 'btwp_change_admin_title');
 
-function altera_admin_titulo(){
+function btwp_change_admin_title(){
 	return get_option('blogname');
 }
