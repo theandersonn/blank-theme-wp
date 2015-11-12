@@ -12,11 +12,11 @@ function btwp_enqueue_scripts() {
 	wp_enqueue_style( 'btwp-googleFonts');
 
 	// Carrega os estilos do tema
-	wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/css/all.min.css');
+	wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/src/assets/css/all.min.css');
 
 	// Carrega jQuery nativo do WordPress
 	wp_enqueue_script('jquery');
 
 	// Carrega scripts JS
-	wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/js/all.min.js');
+	wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/src/assets/js/all.min.js');
 }

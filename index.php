@@ -2,7 +2,7 @@
 
 <!-- CONTEÚDO SITE -->
 <main>
-	MAIN
+MAIN
 </main>
 
 <?php get_footer(); ?>
