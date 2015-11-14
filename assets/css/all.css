@@ -1,0 +1,691 @@
+/*--------------------------------------------------------------
+    MAIN
+--------------------------------------------------------------*/
+*{
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:after,
+*:before{
+  -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+          box-sizing:border-box;
+  *behavior: url(../js/boxsizing.htc);
+  -webkit-font-smoothing:antialiased;
+          font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+
+}
+
+.cf:before,
+.cf:after{
+  content: "";
+  display: table;
+}
+.cf:after{
+  clear: both;
+}
+.cf{
+  *zoom: 1;
+}
+
+img{
+  border: 0;
+  display: block;
+  max-width: 100%;
+}
+
+object, embed, video, iframe, iframe[style]{
+  max-width: 100%;
+  height: auto;
+}
+
+/* aspect ratio do youtube 16:9 */
+.ratiohd{
+    position: relative;
+    padding-bottom: 56.25%; /* (9/16) * 100 */
+    float: left;
+    width: 100%;
+    height: 0;
+    margin-bottom: 30px;
+}
+.ratio_el{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: normal;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.content{
+  width: 100%;
+  float: left;
+}
+
+/*--------------------------------------------------------------
+    HTML 5
+--------------------------------------------------------------*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary{
+    display: block;
+}
+
+/*--------------------------------------------------------------
+    TIPOGRAFIA
+--------------------------------------------------------------*/
+b,
+strong{
+    font-weight: bold;
+}
+
+hr{
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/* blockquote */
+blockquote{
+	margin: 1.5em 0 1.5em;
+  	padding: 0 8em 0 12em;
+  	position: relative;
+  	text-align: justify;
+}
+
+blockquote:before{
+	color: #ccc;
+	content: "\201C";
+	font-size: 5em;
+	position: absolute;
+	left: 140px;
+	top: 0.3em;
+	line-height: 0.1em;
+}
+
+blockquote:after{
+	color: #ccc;
+	content: "\201D";
+	font-size: 5em;
+	position:absolute;
+	right:103px;
+	bottom: 0em;
+	line-height: 0.1em;
+}
+
+/*--------------------------------------------------------------
+MENU DROPDOWN
+--------------------------------------------------------------*/
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul{
+  list-style: none;
+}
+
+ul.dropdown{
+  position: relative;
+  z-index: 597;
+}
+
+ul.dropdown li{
+  float: left;
+  min-height: 1px;
+  vertical-align: middle;
+}
+
+ul.dropdown li.hover,
+ul.dropdown li:hover{
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+
+/* DIRECAO DO SUBMENU*/
+
+ul.dropdown-right ul{
+  right: 0 ;
+}
+
+ul.dropdown-left ul{
+  left: 0 ;
+}
+
+/* SUBMENU */
+ul.dropdown ul{
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  z-index: 598;
+  font-size: 12px;
+}
+
+ul.dropdown ul li{
+  float: none;
+}
+
+ul.dropdown ul ul{
+  top: 1px;
+  left: 99%;
+}
+
+ul.dropdown li:hover > ul{
+  visibility: visible;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+    IMAGENS WORDPRESS
+--------------------------------------------------------------*/
+.alignleft,
+img.alignleft{
+  display: inline;
+  float: left;
+  margin: 15px 15px 26px 0;
+}
+
+.alignright,
+img.alignright{
+  display: inline;
+  float: right;
+  margin: 15px 0 15px 15px;
+}
+
+.aligncenter,
+img.aligncenter{
+  clear: both;
+  display: block;
+  margin: 15px auto 10px auto;
+}
+
+.alignnone,
+img.alignnone{
+  clear: both;
+  display: block;
+  margin: 20px auto;
+}
+
+/*--------------------------------------------------------------
+    RESPONSIVE YOUTUBE
+--------------------------------------------------------------*/
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*--------------------------------------------------------------
+    CSS GERAL
+--------------------------------------------------------------*/
+.row:before,
+.row:after{
+  content: "";
+  display: table;
+}
+
+.row:after{
+  clear: both;
+}
+
+.row{
+  *zoom: 1;
+  margin: 0 -14px;
+}
+
+/*--------------------------------------------------------------
+    FORMATAÇÃO CLASSE XS, SM E LG
+--------------------------------------------------------------*/
+.col-xs-1, .col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,
+.col-sm-1, .col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,
+.col-md-1, .col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,
+.col-lg-1, .col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{
+    padding: 0 14px;
+    margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+    FORMATAÇÃO CLASSE XS
+--------------------------------------------------------------*/
+.col-xs-1, .col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{
+    float: left;
+    *display: inline-block;
+}
+
+.col-xs-1 { width: 8.33%; }
+.col-xs-2 { width: 16.66%; }
+.col-xs-3 { width: 24.99%; }
+.col-xs-4 { width: 33.32%; }
+.col-xs-5 { width: 41.65%; }
+.col-xs-6 { width: 49.98%; }
+.col-xs-7 { width: 58.31%; }
+.col-xs-8 { width: 66.64%; }
+.col-xs-9 { width: 74.97%; }
+.col-xs-10 { width: 83.3%; }
+.col-xs-11 { width: 91.63%; }
+.col-xs-12 { width: 100%; }
+
+/*--------------------------------------------------------------
+    OFFSETs
+--------------------------------------------------------------*/
+.offset1 { margin-left: 8.33%; }
+.offset2 { margin-left: 16.66%; }
+.offset3 { margin-left: 24.99%; }
+.offset4 { margin-left: 33.32%; }
+.offset5 { margin-left: 41.65%; }
+.offset6 { margin-left: 49.98%; }
+.offset7 { margin-left: 58.31%; }
+.offset8 { margin-left: 66.64%; }
+.offset9 { margin-left: 74.97%; }
+.offset10 { margin-left: 83.3%; }
+.offset11 { margin-left: 91.63%; }
+
+/*--------------------------------------------------------------
+    MEDIA QUERIES
+--------------------------------------------------------------*/
+@media screen and (min-width: 768px){
+
+    .col-sm-1, .col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{
+        float: left;
+    	*display: inline-block;
+    }
+
+    .col-sm-1 { width: 8.33%; }
+    .col-sm-2 { width: 16.66%; }
+    .col-sm-3 { width: 24.99%; }
+    .col-sm-4 { width: 33.32%; }
+    .col-sm-5 { width: 41.65%; }
+    .col-sm-6 { width: 49.98%; }
+    .col-sm-7 { width: 58.31%; }
+    .col-sm-8 { width: 66.64%; }
+    .col-sm-9 { width: 74.97%; }
+    .col-sm-10 { width: 83.3%; }
+    .col-sm-11 { width: 91.63%; }
+    .col-sm-12 { width: 100%; }
+}
+
+@media screen and (min-width: 992px){
+
+    .col-md-1, .col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{
+        float: left;
+    	*display: inline-block;
+    }
+
+    .col-md-1 { width: 8.33%; }
+    .col-md-2 { width: 16.66%; }
+    .col-md-3 { width: 24.99%; }
+    .col-md-4 { width: 33.32%; }
+    .col-md-5 { width: 41.65%; }
+    .col-md-6 { width: 49.98%; }
+    .col-md-7 { width: 58.31%; }
+    .col-md-8 { width: 66.64%; }
+    .col-md-9 { width: 74.97%; }
+    .col-md-10 { width: 83.3%; }
+    .col-md-11 { width: 91.63%; }
+    .col-md-12 { width: 100%; }
+}
+
+@media screen and (min-width: 1200px){
+
+    .col-lg-1, .col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{
+        float: left;
+    	*display: inline-block;
+    }
+
+    .col-lg-1 { width: 8.33%; }
+    .col-lg-2 { width: 16.66%; }
+    .col-lg-3 { width: 24.99%; }
+    .col-lg-4 { width: 33.32%; }
+    .col-lg-5 { width: 41.65%; }
+    .col-lg-6 { width: 49.98%; }
+    .col-lg-7 { width: 58.31%; }
+    .col-lg-8 { width: 66.64%; }
+    .col-lg-9 { width: 74.97%; }
+    .col-lg-10 { width: 83.3%; }
+    .col-lg-11 { width: 91.63%; }
+    .col-lg-12 { width: 100%; }
+}
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/*
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -ms-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease;
+}
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -ms-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3);
+}
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+	margin-top: 10px;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: #869791;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+	margin-top: 10px;
+}
+
+.owl-theme .owl-dots {
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    -ms-transition: opacity 200ms ease;
+    -o-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #869791;
+}
+
+@charset "UTF-8";
+/* ----------------------------------------------
+    FONTES
+---------------------------------------------- */
+/* ----------------------------------------------
+    VARIÁVEIS
+---------------------------------------------- */
+/* ----------------------------------------------
+    MIXINS
+---------------------------------------------- */
+/* ----------------------------------------------
+    MENU HAMBUGUER
+---------------------------------------------- */
+/* ----------------------------------------------
+    FORMULÁRIOS
+---------------------------------------------- */
+/* ----------------------------------------------
+    CSS PRINCIPAL DO SITE
+---------------------------------------------- */
+/* ----------------------------------------------
+    MEDIA QUERIES
+---------------------------------------------- */
