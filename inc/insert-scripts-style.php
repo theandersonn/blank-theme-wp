@@ -12,13 +12,18 @@ function btwp_enqueue_scripts() {
 	wp_enqueue_style( 'btwp-googleFonts');
 
 	// Carrega icons da fonte dashicons
-	wp_enqueue_style( 'tema-css', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );		
+	wp_enqueue_style( 'tema-css', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
 
 	// Carrega os estilos do tema
 	wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/css/all.min.css');
 
 	// Carrega jQuery nativo do WordPress
 	wp_enqueue_script('jquery');
+
+	// Fallbacks JS
+	wp_enqueue_script('html5shiv-js', get_stylesheet_directory_uri() . '/assets/js/fallbacks/html5shiv.min.js');
+	wp_enqueue_script('selectivizr-js', get_stylesheet_directory_uri() . '/assets/js/fallbacks/selectivizr-min.js');
+	wp_enqueue_script('respond-js', get_stylesheet_directory_uri() . '/assets/js/fallbacks/respond.min.js');
 
 	// Carrega scripts JS
 	wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/js/all.min.js');
