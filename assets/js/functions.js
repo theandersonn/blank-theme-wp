@@ -8,10 +8,12 @@ var funcoes = {
 	sliderHome: function(){
 		jQuery('.owl-carousel').owlCarousel({
 			items:1,
-			loop:true,
+			dots:true,
 			autoplay:true,
+			loop:true
 		})
-    },
+    },  
+
 
 	responsiveYouTube: function(){
 		var all_oembed_videos = jQuery("iframe[src*='youtube'], iframe[src*='vimeo']");
