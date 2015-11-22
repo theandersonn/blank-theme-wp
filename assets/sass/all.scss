@@ -1,10 +1,14 @@
+@import 'base/reset';
+@import 'base/grid';
 @import 'base/fonts';
 
 @import 'helpers/variables';
 @import 'helpers/mixins';
 
+@import 'components/owl-carousel';
 @import 'components/menu-hamburguer';
 
 @import 'base/forms';
 @import 'base/main';
 @import 'base/media-queries';
+
