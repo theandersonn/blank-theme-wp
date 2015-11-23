@@ -1,12 +1,12 @@
 # Fluxo de Desenvolvimento
 
-** Remover arquivos da raiz do WordPress ** 
+**Remover arquivos da raiz do WordPress** 
 
 [ ] readme.html
 
 [ ] licence.txt
 
-** Configurações wp-config ** 
+**Configurações wp-config** 
 
 [ ] Desabilitar atualização automática do WordPress
 
@@ -16,7 +16,7 @@
 
 [ ] Remover brs no contact form 
 
-** Remove theme suport **
+**Remove theme suport**
 
 [ ] Aviso de atualização de plugins 
 
