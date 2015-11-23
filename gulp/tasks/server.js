@@ -6,7 +6,7 @@ var browserSync = require('browser-sync');
 
 gulp.task('server', function() {
     browserSync.init({
-        proxy: 'localhost:80/local-dev/'
+		proxy: 'projeto.dev/' //Configure de acordo com o seu projeto
     });
 
     gulp.watch('../**/*').on('change', browserSync.reload);
