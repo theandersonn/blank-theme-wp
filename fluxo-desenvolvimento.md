@@ -2,5 +2,14 @@
 
 ** Remover arquivos da raiz do WordPress ** 
 
-<label><input type="checkbox"/> readme.html </label>
-<label><input type="checkbox"/> licence.txt </label>
+[ ] readme.html
+[ ] licence.txt
+
+** Configurações wp-config ** 
+[] Desabilitar atualização automática do WordPress
+[] Configurar revisões de posts
+[] Desabilitar editor de temas e plugins
+[] Remover brs no contact form 
+
+
+
