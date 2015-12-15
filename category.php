@@ -17,7 +17,7 @@
     <?php endif; ?>
 
     <!-- obter paginação -->
-    <?php get_template_part( 'partials/blog-paginacao' ); ?>
+    <?php get_template_part( 'template-parts/blog', 'paginacao' ); ?>
 </section>
 
 <?php get_footer(); ?>
