@@ -2,7 +2,7 @@
 /*--------------------------------------------------------------
 	CRIANDO PAGINAÇÃO
 --------------------------------------------------------------*/
-function wp_pagination(){
+function btwp_pagination(){
     // Don't print empty markup if there's only one page.
     if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
         return;

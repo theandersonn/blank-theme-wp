@@ -7,6 +7,6 @@
 <!-- aqui loop de posts -->
 
 <!-- obter paginação -->
-<?php wp_pagination();?>
+<?php btwp_pagination(); ?>
 
 <?php get_footer(); ?>

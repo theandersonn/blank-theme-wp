@@ -15,6 +15,9 @@
     <?php else : ?>
     	<p>Nenhum conteúdo encontrado.</p>
     <?php endif; ?>
+
+	<!-- obter paginação -->
+	<?php btwp_pagination(); ?>
 </section>
 
 <?php get_footer(); ?>
