@@ -1,0 +1,36 @@
+/* ----------------------------------------------
+    PAGINAÇÃO
+---------------------------------------------- */
+.pagination {
+  font-size: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.pagination li:first-child {
+  margin-left: 0;
+}
+
+.pagination a,
+.pagination span,
+.pagination .current {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  color: #797979;
+  font-size: 14px;
+  display: block;
+  min-width: 36px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.pagination .current {
+  background: #e0e0e0;
+  color: #fff;
+  cursor: default;
+}
