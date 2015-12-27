@@ -27,6 +27,9 @@ require get_template_directory() . '/inc/insert-scripts-style.php';
 // Insere Thumbnail em colunas do admin
 require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
 
+// Registra Post Type Portfolio (exemplo - deve ser modificado)
+require get_template_directory() . '/inc/register-custom-post-portfolio.php';
+
 // Cria a action Init e Registra Menus
 require get_template_directory() . '/inc/register-menus.php';
 
