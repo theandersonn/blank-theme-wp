@@ -14,7 +14,7 @@ function btwp_custom_post_portfolio(){
 		'add_new_item' 			=> 'Adicionar novo Job',
 		'edit_item' 			=> 'Editar Job',
 		'new_item' 				=> 'Novo Job',
-		'all_items' 			=> 'Todos Jobs',
+		'all_items' 			=> 'Todos os Jobs',
 		'view_item' 			=> 'Visualizar Job',
 		'search_items' 			=> 'Procurar Job',
 		'not_found' 			=> 'Nenhum Job encontrado',
@@ -53,15 +53,15 @@ function btwp_updated_messages ($messages){
 }
 
 /*--------------------------------------------------------------
-	REGISTRA TAXONOMIES -> PORTFÓLO
+	REGISTRA TAXONOMIES -> PORTFÓLO - CATEGORY
 --------------------------------------------------------------*/
-add_action('init', 'btwp_taxonomies_portfolio');
+add_action('init', 'btwp_taxonomies_portfolio_category');
 
-function btwp_taxonomies_portfolio(){
+function btwp_taxonomies_portfolio_category(){
 
 	$labels = array(
-		'name' 					=> 'Portfólio',
-		'singular_name' 		=> 'Portfólio',
+		'name' 					=> 'Categorias',
+		'singular_name' 		=> 'Categoria',
 		'add_new' 				=> 'Adicionar nova',
 		'add_new_item' 			=> 'Adicionar nova Categoria',
 		'edit_item' 			=> 'Editar Categoria',
@@ -76,19 +76,20 @@ function btwp_taxonomies_portfolio(){
 	);
 
 	$args = array(
-		'labels'			=> $labels,
-		'hierarchical'		=> true
+		'labels'				=> $labels,
+		'hierarchical'			=> true,
+		'show_admin_column'		=> true
 	);
 
 	register_taxonomy('portfolio_category', 'portfolio', $args);
 }
 
 /*--------------------------------------------------------------
-	MOSTRAR FILTRO POR TAXONOMIA NA LISTAGEM DOS POSTS
+	EXIBE FILTRO POR CATEGORIA
 --------------------------------------------------------------*/
-add_action( 'restrict_manage_posts', 'btwp_show_filter_taxonomy_portfolio' );
+add_action( 'restrict_manage_posts', 'btwp_show_filter_portfolio_category' );
 
-function btwp_show_filter_taxonomy_portfolio() {
+function btwp_show_filter_portfolio_category() {
 	
 	global $typenow;
 	$taxonomy = 'portfolio_category';
@@ -102,7 +103,69 @@ function btwp_show_filter_taxonomy_portfolio() {
 			$terms = get_terms($tax_slug);
 		
 			echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
-			echo "<option value=''>Mostrar tudo</option>";
+			echo "<option value=''>Todas as Categorias</option>";
+		
+				foreach ($terms as $term) { 
+					echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>'; 
+				}
+		
+			echo "</select>";
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+	REGISTRA TAXONOMIES -> PORTFÓLO - TAG
+--------------------------------------------------------------*/
+add_action('init', 'btwp_taxonomies_portfolio_tag');
+
+function btwp_taxonomies_portfolio_tag(){
+
+	$labels = array(
+		'name' 					=> 'Tags',
+		'singular_name' 		=> 'Tag',
+		'add_new' 				=> 'Adicionar nova',
+		'add_new_item' 			=> 'Adicionar nova Tag',
+		'edit_item' 			=> 'Editar Tag',
+		'new_item' 				=> 'Nova Tag',
+		'all_items' 			=> 'Todas as Tags',
+		'view_item' 			=> 'Visualizar Tag',
+		'search_items' 			=> 'Procurar Tag',
+		'not_found' 			=> 'Nenhuma Tag encontrada',
+		'not_found_in_trash' 	=> 'Nenhuma Tag encontrada na lixeira',
+		'parent_item_colom'		=> '',
+		'menu_name'				=> 'Tags'
+	);
+
+	$args = array(
+		'labels'			=> $labels,
+		'hierarchical'		=> false,
+		'show_admin_column'		=> true,
+	);
+
+	register_taxonomy('portfolio_tag', 'portfolio', $args);
+}
+
+/*--------------------------------------------------------------
+	EXIBE FILTRO POR TAG
+--------------------------------------------------------------*/
+add_action( 'restrict_manage_posts', 'btwp_show_filter_portfolio_tag' );
+
+function btwp_show_filter_portfolio_tag() {
+	
+	global $typenow;
+	$taxonomy = 'portfolio_tag';
+
+	if( $typenow == 'portfolio' ){
+		$filters = array($taxonomy);
+		
+		foreach ($filters as $tax_slug) {
+			$tax_obj = get_taxonomy($tax_slug);
+			$tax_name = $tax_obj->labels->name;
+			$terms = get_terms($tax_slug);
+		
+			echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
+			echo "<option value=''>Todas as Tags</option>";
 		
 				foreach ($terms as $term) { 
 					echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>'; 
@@ -117,6 +180,7 @@ function btwp_show_filter_taxonomy_portfolio() {
 	INSERE METABOX
 --------------------------------------------------------------*/
 add_action('add_meta_boxes', 'btwp_portfolio_link_box');
+
 
 function btwp_portfolio_link_box(){
 	
