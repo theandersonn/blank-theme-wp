@@ -51,9 +51,9 @@ function btwp_register_taxonomies_slider(){
 /*--------------------------------------------------------------
 	MOSTRAR FILTRO POR TAXONOMIA NA LISTAGEM DOS POSTS
 --------------------------------------------------------------*/
-add_action( 'restrict_manage_posts', 'btwp_show_filter_taxonomy' );
+add_action( 'restrict_manage_posts', 'btwp_show_filter_taxonomy_slider' );
 
-function btwp_show_filter_taxonomy() {
+function btwp_show_filter_taxonomy_slider() {
 	
 	global $typenow;
 	$taxonomy = 'slider-categoria';

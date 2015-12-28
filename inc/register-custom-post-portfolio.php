@@ -72,7 +72,7 @@ function btwp_taxonomies_portfolio(){
 		'not_found' 			=> 'Nenhuma Categoria encontrada',
 		'not_found_in_trash' 	=> 'Nenhuma Categoria encontrada na lixeira',
 		'parent_item_colom'		=> '',
-		'menu_name'				=> 'Categorias de Portfólio'
+		'menu_name'				=> 'Categorias'
 	);
 
 	$args = array(
@@ -86,9 +86,9 @@ function btwp_taxonomies_portfolio(){
 /*--------------------------------------------------------------
 	MOSTRAR FILTRO POR TAXONOMIA NA LISTAGEM DOS POSTS
 --------------------------------------------------------------*/
-add_action( 'restrict_manage_posts', 'btwp_show_filter_taxonomy' );
+add_action( 'restrict_manage_posts', 'btwp_show_filter_taxonomy_portfolio' );
 
-function btwp_show_filter_taxonomy() {
+function btwp_show_filter_taxonomy_portfolio() {
 	
 	global $typenow;
 	$taxonomy = 'portfolio_category';
@@ -117,7 +117,6 @@ function btwp_show_filter_taxonomy() {
 	INSERE METABOX
 --------------------------------------------------------------*/
 add_action('add_meta_boxes', 'btwp_portfolio_link_box');
-
 
 function btwp_portfolio_link_box(){
 	
