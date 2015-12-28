@@ -8,7 +8,7 @@ add_action('login_head',  'btwp_change_admin_logo');
 function btwp_change_admin_logo(){
     echo '<style  type="text/css">
 			h1 a{
-				background-image:url('.get_bloginfo('template_directory').'/src/assets/images/logo-blank-theme-wp.jpg)  !important;
+				background-image:url('.get_bloginfo('template_directory').'/assets/images/logo-blank-theme-wp.jpg)  !important;
 				width: 100% !important;
 				height: 100px !important;
 				background-size: 100% !important;
@@ -16,6 +16,8 @@ function btwp_change_admin_logo(){
 		  .button-primary{
 			  background: #000 !important;
 			  border-color: #000 !important;
+			  box-shadow: none !important;
+			  text-shadow: none !important;
 		  }
 		  </style>';
 }
