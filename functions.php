@@ -40,7 +40,7 @@ require get_template_directory() . '/inc/register-post-types-taxonomies.php';
 require get_template_directory() . '/inc/register-sidebar.php';
 
 // Remove lixo do head
-// require get_template_directory() . '/inc/remove-junk-header.php';
+require get_template_directory() . '/inc/remove-junk-header.php';
 
 // Desabilita funcionalidades do tema
 require get_template_directory() . '/inc/remove-theme-suport.php';
