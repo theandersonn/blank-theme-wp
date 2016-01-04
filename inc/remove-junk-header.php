@@ -15,3 +15,6 @@ remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 remove_action('wp_head', 'print_emoji_detection_script', 7 );
 remove_action('wp_print_styles', 'print_emoji_styles' );
+
+// remove barra admin do topo
+add_filter( 'show_admin_bar', '__return_false' );
