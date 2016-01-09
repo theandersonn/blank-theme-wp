@@ -7,7 +7,7 @@
 // function btwp_hide_acf_menu(){
 
 //     // users can view the menu
-//     $admins = array( 
+//     $admins = array(
 //         'name-admin'
 //     );
 
@@ -24,17 +24,26 @@
 
 /*--------------------------------------------------------------
     HIDE USERNAMES FROM COMMENT CLASS
---------------------------------------------------------------*/ 
+--------------------------------------------------------------*/
 add_filter('comment_class', 'btwp_true_completely_remove_css_class');
 
 function btwp_true_completely_remove_css_class( $classes ) {
-    
+
     foreach( $classes as $key => $class ) {
         if(strstr( $class, "comment-author-" ) ) {
             unset( $classes[$key] );
         }
     }
-    
+
     return $classes;
 
+}
+
+/*---------------------------------------------------------------------
+    REMOVE THE 1600PX LIMIT FOR IMAGES INCLUDED IN 'SRCSET' ATTIBUTES
+---------------------------------------------------------------------*/
+add_filter( 'max_srcset_image_width', 'btwp_remove_max_srcset_image_width' );
+
+function btwp_remove_max_srcset_image_width( $max_width ) {
+    return false;
 }
