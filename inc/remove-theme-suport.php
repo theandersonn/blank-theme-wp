@@ -47,3 +47,9 @@ add_filter( 'max_srcset_image_width', 'btwp_remove_max_srcset_image_width' );
 function btwp_remove_max_srcset_image_width( $max_width ) {
     return false;
 }
+
+/*--------------------------------------------------------------
+    STOP LOADING THE JAVASCRIPT AND CSS STYLESHEET ON ALL PAGES
+--------------------------------------------------------------*/
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
