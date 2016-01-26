@@ -3077,12 +3077,14 @@ var funcoes = {
 
 	sliderHome: function(){
 		jQuery('.owl-carousel').owlCarousel({
-			items:1,
-			dots:true,
-			autoplay:true,
-			loop:true
+			items: 1,
+	        autoplaySpeed: 1000,
+	        autoplayTimeout: 7000,
+	        autoplay: true,
+	        nav: false,
+	        loop: true  
 		})
-    },  
+    },
 
 
 	responsiveYouTube: function(){
