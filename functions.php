@@ -33,9 +33,6 @@ require get_template_directory() . '/inc/register-custom-post-portfolio.php';
 // Cria a action Init e Registra Menus
 require get_template_directory() . '/inc/register-menus.php';
 
-// Registra Post Types e Taxonomias
-require get_template_directory() . '/inc/register-post-types-taxonomies.php';
-
 // Registra Sidebars
 require get_template_directory() . '/inc/register-sidebar.php';
 
