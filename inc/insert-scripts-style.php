@@ -16,6 +16,7 @@ function btwp_enqueue_scripts() {
 
 	// Carrega os estilos CSS - DESENVOLVIMENTO
 	wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/css/all.css');
+	
 	// Carrega os estilos CSS - FINAL
 	//wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/css/all.min.css');
 
@@ -24,19 +25,11 @@ function btwp_enqueue_scripts() {
 
 	// Fallbacks JS
 	wp_enqueue_script('html5shiv-js', get_stylesheet_directory_uri() . '/assets/js/fallbacks/html5shiv.min.js');
-	wp_enqueue_script('selectivizr-js', get_stylesheet_directory_uri() . '/assets/js/fallbacks/selectivizr-min.js');
 	wp_enqueue_script('respond-js', get_stylesheet_directory_uri() . '/assets/js/fallbacks/respond.min.js');
 
 	// Carrega scripts JS - DESENVOLVIMENTO
 	wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/js/all.js');
+	
 	// Carrega scripts JS - FINAL
 	//wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/js/all.min.js');
 }
-
-/* Exemplo de uso - dashicons
-
-.paintbrush-link:before {
-   font-family: "dashicons";
-   content: "\f100";
-}
-*/
