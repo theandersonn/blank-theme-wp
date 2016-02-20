@@ -14,10 +14,15 @@
 
 	<!-- TOPO SITE -->
 	<header>
-        HEADER
-    <!-- CHAMADA DO MENU PRINCIPAL -->
-    <?php //nav_principal(); ?>
+        <div class="wrap">
+            <h1>
+                <a href="<?php echo site_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
+            </h1>
+            
+            <!-- CHAMADA DO MENU PRINCIPAL -->
+            <?php //nav_principal(); ?>
 
-    <!-- CHAMADA DO MENU MOBILE -->
-    <?php //nav_mobile(); ?>
+            <!-- CHAMADA DO MENU MOBILE -->
+            <?php //nav_mobile(); ?>
+        </div>
 	</header>
