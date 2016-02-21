@@ -1,12 +1,10 @@
-<?php get_header(); 
+		<?php get_header(); /* Tempalte Name: Home */ ?>
 
-/* Tempalte Name: Home */
+        <!-- CONTEÚDO HOME DO SITE -->
+        <main>
+             <div class="wrap">
+                MAIN
+             </div>
+        </main>
 
-?>
-
-<!-- CONTEÚDO HOME DO SITE -->
-<main>
-MAIN
-</main>
-
-<?php get_footer(); ?>
+		<?php get_footer(); ?>

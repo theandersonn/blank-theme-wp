@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>
+<html<?php language_attributes(); ?>>
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -10,19 +10,23 @@
 
         <?php wp_head(); ?>
     </head>
-<body>
+    
+    <body>
 
-	<!-- TOPO SITE -->
-	<header>
-        <div class="wrap">
-            <h1>
-                <a href="<?php echo site_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
-            </h1>
-            
-            <!-- CHAMADA DO MENU PRINCIPAL -->
-            <?php //nav_principal(); ?>
+        <!-- TOPO SITE -->
+        <header>
+            <div class="wrap">
+                <h1>
+                    <a href="<?php echo site_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
+                </h1>
+                
+                
+                <nav>
+                    <!-- CHAMADA DO MENU PRINCIPAL -->
+                    <?php //nav_principal(); ?>
 
-            <!-- CHAMADA DO MENU MOBILE -->
-            <?php //nav_mobile(); ?>
-        </div>
-	</header>
+                    <!-- CHAMADA DO MENU MOBILE -->
+                    <?php //nav_mobile(); ?>
+                </nav>
+            </div>
+        </header>  
