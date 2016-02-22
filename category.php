@@ -13,13 +13,11 @@
     <?php endwhile; ?>
 
     <?php else : ?>
-    	<p>Nenhum conteúdo encontrado.</p>
+        <p>Nenhum conteúdo encontrado.</p>
     <?php endif; ?>
 
     <!-- OBTER PAGINAÇÃO -->
-    <div class="pagination">
-        <?php wp_paginationn(); ?>
-    </div>
+    <?php btwp_pagination(); ?>
 
     <!-- <div class="pagination">
         <ul class="page-numbers">

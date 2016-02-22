@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html<?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
