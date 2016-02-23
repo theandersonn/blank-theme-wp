@@ -1,4 +1,4 @@
-<?php get_header(); /* Template Name: Blog */ ?>
+<?php get_header(); ?>
 
 <!-- CONTEÚDO COM LOOP DAS POSTAGENS PRINCIPAIS DO SITE -->
 <main>

@@ -19,7 +19,7 @@
 	<?php if ( comments_open() ) : ?>
 
 		<div id="respond">
-			<h4 class="tt-comentarios">Deixe seu comentÃ¡rio</h4>
+			<h4 class="tt-comentarios">Deixe seu comentário</h4>
 
 			<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
@@ -27,8 +27,8 @@
 
 					<p class="txt-comentarios">Autentificado como <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(); ?>" title="Sair desta conta">Sair desta conta &raquo;</a></p>
 
-					<textarea class="input" name="comment" id="comment" placeholder="ComentÃ¡rio..." rows="6" cols=""></textarea>
-		            <input type="submit" class="btn-home-publicacoes" value="Enviar comentÃ¡rio" />
+					<textarea class="input" name="comment" id="comment" placeholder="Comentário..." rows="6" cols=""></textarea>
+		            <input type="submit" class="btn-home-publicacoes" value="Enviar comentário" />
 
 				<?php else : ?>
 
@@ -40,8 +40,8 @@
 							<input class="input" type="text" name="email" id="email" placeholder="Email" value="<?php echo $comment_author_email; ?>" />
 						</label>
 					</div>
-					<textarea class="input" name="comment" id="comment" placeholder="ComentÃ¡rio..." rows="6" cols=""></textarea>
-                	<input class="btn-home-publicacoes" type="submit" value="Enviar comentÃ¡rio" />
+					<textarea class="input" name="comment" id="comment" placeholder="Comentário..." rows="6" cols=""></textarea>
+                	<input class="btn-home-publicacoes" type="submit" value="Enviar comentário" />
 
                 <?php endif; ?>
 

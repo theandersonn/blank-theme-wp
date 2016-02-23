@@ -1,4 +1,4 @@
-		<?php get_header(); /* Template Name: Página inicial */ ?>
+		<?php get_header(); ?>
 
         <!-- CONTEÚDO HOME DO SITE -->
         <main>
