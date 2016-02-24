@@ -1,58 +1,79 @@
-<div id="comments" class="mrg-l">
+<?php
+/**
+ * The template for displaying comments
+ *
+ * The area of the page that contains both current comments
+ * and the comment form.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
+
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() ) {
+	return;
+}
+?>
+
+<div id="comments" class="comments-area">
+
 	<?php if ( have_comments() ) : ?>
+		<h2 class="comments-title">
+			<?php
+				$comments_number = get_comments_number();
+				if ( 1 === $comments_number ) {
+					/* translators: %s: post title */
+					printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'twentysixteen' ), get_the_title() );
+				} else {
+					printf(
+						/* translators: 1: number of comments, 2: post title */
+						_nx(
+							'%1$s thought on &ldquo;%2$s&rdquo;',
+							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							$comments_number,
+							'comments title',
+							'twentysixteen'
+						),
+						number_format_i18n( $comments_number ),
+						get_the_title()
+					);
+				}
+			?>
+		</h2>
 
-		<ul class="commentlist">
-			<?php wp_list_comments('avatar_size=76&type=comment&callback=mytheme_comment'); ?>
-	    </ul>
+		<?php the_comments_navigation(); ?>
 
-		<?php if ($wp_query->max_num_pages > 1) : ?>
-			<div class="pagination">
-		    	<ul>
-		    		<li class="older"><?php previous_comments_link('Anteriores'); ?></li>
-		   			<li class="newer"><?php next_comments_link('Novos'); ?></li>
-		   		</ul>
-		    </div>
-	   	<?php endif; ?>
+		<ol class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'style'       => 'ol',
+					'short_ping'  => true,
+					'avatar_size' => 42,
+				) );
+			?>
+		</ol><!-- .comment-list -->
 
+		<?php the_comments_navigation(); ?>
+
+	<?php endif; // Check for have_comments(). ?>
+
+	<?php
+		// If comments are closed and there are comments, let's leave a little note, shall we?
+		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentysixteen' ); ?></p>
 	<?php endif; ?>
 
-	<?php if ( comments_open() ) : ?>
+	<?php
+		comment_form( array(
+			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
+			'title_reply_after'  => '</h2>',
+		) );
+	?>
 
-		<div id="respond">
-			<h4 class="tt-comentarios">Deixe seu comentário</h4>
-
-			<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-
-				<?php if ( $user_ID ) : ?>
-
-					<p class="txt-comentarios">Autentificado como <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(); ?>" title="Sair desta conta">Sair desta conta &raquo;</a></p>
-
-					<textarea class="input" name="comment" id="comment" placeholder="Comentário..." rows="6" cols=""></textarea>
-		            <input type="submit" class="btn-home-publicacoes" value="Enviar comentário" />
-
-				<?php else : ?>
-
-					<div class="cf">
-						<label class="input-50">
-							<input class="input" type="text" name="author" id="author" placeholder="Nome" value="<?php echo $comment_author; ?>" />
-	                	</label>
-						<label class="input-50">
-							<input class="input" type="text" name="email" id="email" placeholder="Email" value="<?php echo $comment_author_email; ?>" />
-						</label>
-					</div>
-					<textarea class="input" name="comment" id="comment" placeholder="Comentário..." rows="6" cols=""></textarea>
-                	<input class="btn-home-publicacoes" type="submit" value="Enviar comentário" />
-
-                <?php endif; ?>
-
-
-                <?php comment_id_fields(); ?>
-                <?php do_action('comment_form', $post->ID); ?>
-
-	        </form>
-        	<p class="cancel"><?php cancel_comment_reply_link('Cancelar Resposta'); ?></p>
-		</div>
-	 <?php else : ?>
-		<h3>Os comentários estão fechados.</h3>
-<?php endif; ?>
-</div>
+</div><!-- .comments-area -->
