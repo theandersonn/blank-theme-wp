@@ -15,7 +15,7 @@
 
         <!-- TOPO SITE -->
         <header>
-            <div class="wrap">
+            <div class="wrapper">
                 <h1>
                     <a href="<?php echo site_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
                 </h1>
