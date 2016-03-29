@@ -28,3 +28,5 @@ add_theme_support( 'post-formats', array(
 	'chat' ) 
 );
 
+// add_post_type_support( 'nome-taxonomia', 'post-formats' );
+
