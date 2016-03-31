@@ -155,3 +155,138 @@ blockquote:after{
   bottom: 0em;
   line-height: 0.1em;
 }
+
+/* ----------------------------------------------
+  COMENTÁRIOS
+---------------------------------------------- */  
+#comments{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.comentarios-tt{
+    color: #333;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.input{
+    background: #fff;
+    border: 1px solid #dedede;
+    color: #8e8e8e;
+    font-size: 14px;
+    margin: 7px 0 15px 0;
+    padding: 24px;
+    width: 100%;
+}
+
+.input-50{
+    float: left;
+    margin-left: 10px;
+    width: 49.1%;
+}
+
+.cf .input-50:first-child{
+    margin-left: 0;
+}
+
+.comentarios-btn {
+    background-color: #f9f9f9; 
+    border: 2px solid $333;
+    color: #333;
+    font-size: 14px;
+    font-weight: 100;   
+    padding: 11px 23px;
+}
+
+.comentarios-btn:hover {
+    text-decoration: underline;
+}
+
+.txt-comentarios{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.txt-comentarios a{
+    color: #5c6873;
+    text-decoration: none;
+}
+
+.txt-comentarios a:hover{
+    text-decoration: underline;
+}
+
+.comment-author{
+    float: left;
+    margin-right: 24px;
+}
+
+.comment-author img{
+    max-width: 64px;
+    max-height: 64px;
+}
+
+#respond{
+    width: 100%;
+    clear: both;
+}
+
+cite.fn, .url{
+    color: #3f444a;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+span.says{
+    color: #b6b6b6;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.comment-meta p{
+    color: #5c6873;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 3px 0 15px 0;
+}
+
+.comment-meta a{
+    text-decoration: none;
+    color: #3f444a;
+    font-size: 15px;
+}
+
+a.comment-edit-link{
+    color: #333;
+    font-size: 15px;
+}
+
+a.comment-edit-link:hover{
+    text-decoration: underline;
+}
+
+.commentlist{
+    margin: 10px 0px 100px 0;
+}
+
+ul.commentlist li{
+    margin-bottom: 75px;
+}
+
+.comment-reply-link{
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+
+.comment-reply-link:hover{
+    text-decoration: underline;
+}
+
+.children{
+    margin: 70px 0 0 50px;
+}
