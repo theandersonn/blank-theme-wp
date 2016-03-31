@@ -1,5 +1,5 @@
 <?php
-function theme_comment($comment, $args, $depth) {
+function mytheme_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
 
