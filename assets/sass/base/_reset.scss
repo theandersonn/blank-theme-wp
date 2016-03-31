@@ -305,10 +305,11 @@ img {
   vertical-align: middle;
 }
 
-.img-responsive {
+img {
+  border: 0;
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;   
 }
 
 .img-rounded {
