@@ -69,6 +69,11 @@ template {
 
 a {
   background-color: transparent;
+  outline: 0;
+}
+
+a:focus { 
+    outline: 0; 
 }
 
 a:active,
