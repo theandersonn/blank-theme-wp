@@ -21,7 +21,7 @@ function nav_principal(){
             // remove container gerado pelo WP */
             'container'         => false,
             // aplica estilo desenvolvido para o menu */
-            'menu_class'        => '',
+            'menu_class'        => 'nav navbar-nav navbar-right',
             // caso não tenha menu para esta área, não é exibido nada */
             'fallback_cb'       => '',
             // Limita os níveis de hierarquia do menu

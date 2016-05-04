@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 gulp.task('concatjs', function() {
   return gulp.src([
       '../assets/js/owl.carousel.js',
+      '../assets/js/bootstrap.js',      
       '../assets/js/functions.js'
   ])
     .pipe(concat('all.js'))
