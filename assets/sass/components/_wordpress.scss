@@ -159,134 +159,72 @@ blockquote:after{
 /* ----------------------------------------------
   COMENTÁRIOS
 ---------------------------------------------- */  
-#comments{
-    margin-top: 20px;
-    width: 100%;
-}
+/*Commentários individuais*/
 
-.comentarios-tt{
-    color: #333;
-    font-size: 16px;
-    font-weight: 200;
-}
+.commentlist .reply {}
+.commentlist .reply a {}
 
-.input{
-    background: #fff;
-    border: 1px solid #dedede;
-    color: #8e8e8e;
-    font-size: 14px;
-    margin: 7px 0 15px 0;
-    padding: 24px;
-    width: 100%;
-}
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
 
-.input-50{
-    float: left;
-    margin-left: 10px;
-    width: 49.1%;
-}
+.commentlist .vcard {}
+.commentlist .vcard cite.fn {}
+.commentlist .vcard span.says {}
+.commentlist .vcard img.photo {}
+.commentlist .vcard img.avatar {}
+.commentlist .vcard cite.fn a.url {}
 
-.cf .input-50:first-child{
-    margin-left: 0;
-}
+.commentlist .comment-meta {}
+.commentlist .comment-meta a {}
+.commentlist .commentmetadata {}
+.commentlist .commentmetadata a {}
 
-.comentarios-btn {
-    background-color: #f9f9f9; 
-    border: 2px solid #333;
-    color: #333;
-    font-size: 14px;
-    font-weight: 100;   
-    padding: 11px 23px;
-}
+.commentlist .parent {}
+.commentlist .comment {}
+.commentlist .children {}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist .comment-author {}
+.commentlist .comment-author-admin {}
 
-.comentarios-btn:hover {
-    text-decoration: underline;
-}
+.commentlist {}
+.commentlist li {}
+.commentlist li p {}
+.commentlist li ul {}
+.commentlist li ul.children li {}
+.commentlist li ul.children li.alt {}
+.commentlist li ul.children li.byuser {}
+.commentlist li ul.children li.comment {}
+.commentlist li ul.children li.depth-{id} {}
+.commentlist li ul.children li.bypostauthor {}
+.commentlist li ul.children li.comment-author-admin {}
 
-.txt-comentarios{
-    font-size: 15px;
-    margin-top: 10px;
-}
+#cancel-comment-reply {}
+#cancel-comment-reply a {}
 
-.txt-comentarios a{
-    color: #5c6873;
-    text-decoration: none;
-}
+/* Formulário de comentários */
 
-.txt-comentarios a:hover{
-    text-decoration: underline;
-}
-
-.comment-author{
-    float: left;
-    margin-right: 24px;
-}
-
-.comment-author img{
-    max-width: 64px;
-    max-height: 64px;
-}
-
-#respond{
-    width: 100%;
-    clear: both;
-}
-
-cite.fn, .url{
-    color: #3f444a;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-span.says{
-    color: #b6b6b6;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.comment-meta p{
-    color: #5c6873;
-    font-size: 15px;
-    font-weight: 100;
-    margin: 3px 0 15px 0;
-}
-
-.comment-meta a{
-    text-decoration: none;
-    color: #3f444a;
-    font-size: 15px;
-}
-
-a.comment-edit-link{
-    color: #333;
-    font-size: 15px;
-}
-
-a.comment-edit-link:hover{
-    text-decoration: underline;
-}
-
-.commentlist{
-    margin: 10px 0px 100px 0;
-}
-
-ul.commentlist li{
-    margin-bottom: 75px;
-}
-
-.comment-reply-link{
-    font-size: 13px;
-    font-weight: 500;
-    color: #333;
-    text-decoration: none;
-}
-
-.comment-reply-link:hover{
-    text-decoration: underline;
-}
-
-.children{
-    margin: 70px 0 0 50px;
-}
+#respond { }
+#reply-title { }
+#cancel-comment-reply-link { }
+#commentform { }
+#author { }
+#email { }
+#url { }
+#comment
+#submit
+.comment-notes { }
+.required { }
+.comment-form-author { }
+.comment-form-email { }
+.comment-form-url { }
+.comment-form-comment { }
+.form-allowed-tags { }
+.form-submit { }
