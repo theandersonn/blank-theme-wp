@@ -1,8 +1,5 @@
 <?php
 
-// Ativa modo manutenção
-// require get_template_directory() . '/inc/active-maintenace-mode.php';
-
 // Habilita funcionalidades suportadas
 require get_template_directory() . '/inc/add-theme-suport.php';
 
