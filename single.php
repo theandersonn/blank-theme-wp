@@ -12,7 +12,7 @@
     <?php endif; ?>
 
 <!-- COMENTÁRIOS -->
-<div class="container containner_comments">
+<div class="containner_comments">
     <?php comments_template(); ?>
 </div>
 
