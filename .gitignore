@@ -1,4 +1,45 @@
-# Project
-*.DS_Store
+# MOVE THIS FILE TO ROOT
+
+# WORDPRESS
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+wp-content/blogs.dir/
+wp-content/cache/
+wc-logs/
+wp-snapshots/
+
+# THEME
 .sass-cache
-node_modules
+wp-content/themes/theme-name/gulp/node_modules/
+
+# GLOBAL
+._*
+.AppleDouble
+.DS_Store
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+*~
+TAGS
+tags
+.*.sw[a-z]
+.netrwhist
+*.un~
+Session.vim
+*.log
+*.sublime-project
+*.sublime-workspace
+*.sublime-projectcompletions
+*.tmproj
+*.tmproject
+tmtags
+nbproject/
+.ftppass
+.sftp-config.json
+.idea
