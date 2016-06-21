@@ -4,13 +4,13 @@
     <h2>Post(s) com a Tag <?php single_tag_title(); ?></h2>
 
     <!-- THE DEFAULT LOOP -->
-    <?php get_template_part( 'loop', 'default' ); ?>
+    <?php get_template_part( 'component', 'loop' ); ?>
 
-	<!-- GET PAGINATION -->
-	<?php //btwp_pagination(); ?>
+    <!-- GET PAGINATION -->
+    <?php //btwp_pagination(); ?>
 
     <!-- PAGINATION HTML -->
-    <?php get_template_part( 'pagination', 'html' ); ?>    
+    <?php get_template_part( 'component', 'pagination-html' ); ?>  
 </section>
 
 <?php get_footer(); ?>

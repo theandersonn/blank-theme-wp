@@ -13,7 +13,7 @@
 
 <section>
     <!-- THE DEFAULT LOOP -->
-    <?php get_template_part( 'loop', 'default' ); ?>
+    <?php get_template_part( 'component', 'loop' ); ?>
 </section>
 
 <?php get_footer(); ?>
