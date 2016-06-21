@@ -1,6 +1,6 @@
 <?php  
 /*--------------------------------------------------------------
-	REGISTRA CUSTOM POST -> PORTFÓLIO
+	REGISTRA CPT -> PORTFÓLIO
 
 	O TERM PORTFOLIO É UM EXEMPLO (DEVE SER MODIFICADO)
 --------------------------------------------------------------*/
