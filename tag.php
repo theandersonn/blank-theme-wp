@@ -1,23 +1,16 @@
 <?php get_header(); ?>
 
 <section>
-
     <h2>Post(s) com a Tag <?php single_tag_title(); ?></h2>
 
-    <!-- CONTEÚDO PADRÃO DAS PÁGINAS ESTÁTICAS -->
-    <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+    <!-- THE DEFAULT LOOP -->
+    <?php get_template_part( 'loop', 'default' ); ?>
 
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+	<!-- GET PAGINATION -->
+	<?php //btwp_pagination(); ?>
 
-    <?php endwhile; ?>
-
-    <?php else : ?>
-    	<p>Nenhum conteúdo encontrado.</p>
-    <?php endif; ?>
-
-	<!-- obter paginação -->
-	<?php btwp_pagination(); ?>
+    <!-- PAGINATION HTML -->
+    <?php get_template_part( 'pagination', 'html' ); ?>    
 </section>
 
 <?php get_footer(); ?>
