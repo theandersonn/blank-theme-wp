@@ -2,13 +2,13 @@
 
 <section>
     <!-- THE DEFAULT LOOP -->
-    <?php get_template_part( 'component', 'loop' ); ?>
+    <?php get_template_part( 'template-parts/component', 'loop' ); ?>
 
     <!-- GET PAGINATION -->
     <?php //btwp_pagination(); ?>
 
     <!-- PAGINATION HTML -->
-    <?php get_template_part( 'component', 'pagination-html' ); ?>
+    <?php get_template_part( 'template-parts/component', 'pagination-html' ); ?>
 </section>
 
 <?php get_footer(); ?>
