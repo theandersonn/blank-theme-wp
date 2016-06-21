@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 
-<h2>
-    Resultado da busca pelo termo '<?php echo esc_html ( get_query_var('s') ); ?>'
-</h2>
+<section>
+    <h2>Resultado da busca pelo termo '<?php echo esc_html ( get_query_var('s') ); ?>'</h2>
 
-<!-- aqui loop de posts -->
+    <!-- THE DEFAULT LOOP -->
+    <?php get_template_part( 'loop', 'default' ); ?>
 
-<!-- obter paginação -->
-<?php btwp_pagination(); ?>
+	<!-- GET PAGINATION -->
+	<?php //btwp_pagination(); ?>
+
+    <!-- PAGINATION HTML -->
+    <?php get_template_part( 'pagination', 'html' ); ?>
+</section>
 
 <?php get_footer(); ?>

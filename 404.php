@@ -3,7 +3,9 @@
 <section>
 	<div class="container">
 		<div class="not-found">
-			<div><strong>404</strong></div>
+			<div>
+				<strong>404</strong>
+			</div>
 			<p>Página não encontrada</p>
 		</div>
 	</div>
