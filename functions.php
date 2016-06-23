@@ -35,6 +35,3 @@ require get_template_directory() . '/inc/remove-junk-header.php';
 
 // Desabilita funcionalidades do tema
 require get_template_directory() . '/inc/remove-theme-suport.php';
-
-// Post Thumbnails
-require get_template_directory() . '/inc/set-post-thumbnails.php';
