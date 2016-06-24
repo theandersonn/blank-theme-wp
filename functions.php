@@ -21,6 +21,9 @@ require get_template_directory() . '/inc/insert-scripts-style.php';
 // Insere Thumbnail em colunas do admin
 require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
 
+// Insere WP Bootstrap Navwalker
+require get_template_directory() . '/inc/insert-wp-bootstrap-navwalker.php';
+
 // Registra Post Type Portfolio (exemplo - deve ser modificado)
 require get_template_directory() . '/inc/register-cpt-portfolio.php';
 

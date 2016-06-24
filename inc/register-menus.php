@@ -5,36 +5,45 @@
 add_action('init', 'btwp_init_menu');
 
 function btwp_init_menu() {
-	// Registra menus
-	register_nav_menu('nav-principal', 'Nav principal');
-	register_nav_menu('nav-mobile', 'Nav mobile');
+    register_nav_menus( 
+            array(
+               'menu-header' => 'Menu header',
+               'menu-footer' => 'Menu footer'
+    )       );
 }
 
 /*--------------------------------------------------------------
 	EXIBE OS MENUS
 --------------------------------------------------------------*/
-function nav_principal(){
-    wp_nav_menu(
+function menu_header(){
+    wp_nav_menu( 
         array(
-            // identificação do menu
-            'theme_location'    => 'nav-principal',
-            // remove container gerado pelo WP */
-            'container'         => false,
-            // aplica estilo desenvolvido para o menu */
+            // identificação do menu    
+            'menu'              => 'Menu header',
+            'theme_location'    => 'menu-header',
+            // níveis de hierarquia do menu
+            'depth'             => 2,
+            // container gerado pelo WordPress            
+            'container'         => 'div',
+            // bootstrap menu collapse 
+            'container_class'   => 'collapse navbar-collapse',
+            // id referencia bootstrap javascript  
+            'container_id'      => 'menu-header-custom',
+            // aplica estilo desenvolvido para o menu
             'menu_class'        => 'nav navbar-nav navbar-right',
-            // caso não tenha menu para esta área, não é exibido nada */
-            'fallback_cb'       => '',
-            // Limita os níveis de hierarquia do menu
-            'depth'             => 1
-        )
-    );
+            // fallback caso não exista nenhum menu
+            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            // instância da classe wp_bootstrap_navwalker
+            'walker'            => new wp_bootstrap_navwalker())
+        );
 }
 
-function nav_mobile(){
+function menu_footer(){
     wp_nav_menu(
         array(
             // identificação do menu 
-            'theme_location'    => 'nav-mobile',
+            'menu'              => 'Menu footer',            
+            'theme_location'    => 'menu-footer',
             // remove container gerado pelo WP
             'container'         => false,
             // aplica estilo desenvolvido para o menu
