@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section>
+<main>
 	<?php
 		$args = new WP_query(
 		    array(
@@ -28,6 +28,6 @@
 	<?php echo get_post_meta($post->ID, '_portfolio_link', true);?>
 
 	<?php endwhile; endif; wp_reset_postdata(); ?> 	 
-</section>
+</main>
 
 <?php get_footer(); ?>

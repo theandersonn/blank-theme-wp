@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<section>
+<main>
 	<div class="container">
-		<div class="not-found">
+		<div class="row not-found">
 			<div>
 				<strong>404</strong>
 			</div>
-			<p>Página não encontrada</p>
+			<p>Página não encontrada</p>			
 		</div>
 	</div>
-</section>
+</main>
 
 <?php get_footer(); ?>
