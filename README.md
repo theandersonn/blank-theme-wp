@@ -8,12 +8,12 @@
 
 
 ## Características
-- Assets personalizado com [Gulp](https://github.com/theandersonn/gulp-bootstrap)	
+- Assets personalizado com [Gulp Bootstrap](https://github.com/theandersonn/gulp-bootstrap)	
 - Carregamento de estilos e scripts feito com wp_enqueue_scripts
 - Exemplo de Custom Post Type 'portfolio' em funcionamento
 - Exibição de thumbnails nas colunas da dashboard
 - Functions modularizado
-- Inc - Grupo de funções personalizadas - detalhes ver [Wiki](https://github.com/theandersonn/blank-theme-wp/wiki)
+- Inc - Grupo de funções personalizadas - detalhes ver [Wiki](https://github.com/theandersonn/blank-theme-wp/wiki) está sendo escrita
 	- add-theme-suport
 	- change-text-size
 	- customize-login-admin
