@@ -2,8 +2,8 @@
 
 > Tema em branco para acelerar o desenvolvimento de sites com WordPress
 
-<p align="center">
-    <img src="https://github.com/theandersonn/blank-theme-wp/blob/master/assets/images/banners/github-blank-theme-wp.png" width="888" />
+<p align="center" style="display: block; margin-top: 50px;">
+    <img src="assets/images/banners/github-blank-theme-wp.png" width="888" />
 </p>
 
 
