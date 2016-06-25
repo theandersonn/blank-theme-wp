@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main class="main">
 	<div class="container">
 		<div class="row">
 		    <h2>Post(s) com a Tag <?php single_tag_title(); ?></h2>

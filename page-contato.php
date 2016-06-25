@@ -11,7 +11,7 @@
         }
     ?>
 
-<main>
+<main class="main">
     <div class="container">
         <div class="row">
             <!-- THE DEFAULT LOOP -->

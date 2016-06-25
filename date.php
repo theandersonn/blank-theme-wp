@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main class="main">
 	<div class="container">
 		<div class="row">
 		    <h2>Posts de <?php single_month_title(' '); ?></h2>

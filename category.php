@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main class="main">
 	<div class="container">
 		<div class="row">
 		    <h2>Categoria: <?php single_cat_title(); ?></h2>

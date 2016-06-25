@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main class="main">
 	<div class="container">
 		<div class="row">
 		    <h2>Resultado da busca pelo termo '<?php echo esc_html ( get_query_var('s') ); ?>'</h2>
