@@ -12,11 +12,12 @@
     </head>
     
     <body>
-        <!-- TOPO SITE -->
         <header class="header">
             <nav class="navbar navbar-default">
                 <div class="container">
                     <div class="navbar-header">
+
+                        <!-- header hamburguer -->
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-header-custom" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
@@ -24,6 +25,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         
+                        <!-- header logo  -->
                         <h1>
                             <a class="navbar-brand" href="<?php echo site_url(); ?>" title="<?php bloginfo( 'name' ); ?>">
                                 <?php bloginfo( 'name' ); ?>
@@ -31,7 +33,11 @@
                         </h1>
                     </div>
 
-                    <?php menu_header(); ?>
+                    <!-- header menu html -->
+                    <?php get_template_part( 'template-parts/component', 'menu-html' ); ?>
+
+                    <!-- header menu -->
+                    <?php //if (function_exists('menu_header')) { menu_header(); } ?>                    
                 </div>
             </nav>
-        </header>  
+        </header> 
