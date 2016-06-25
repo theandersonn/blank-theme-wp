@@ -31,7 +31,7 @@ require get_template_directory() . '/inc/register-cpt-portfolio.php';
 require get_template_directory() . '/inc/register-menus.php';
 
 // Registra Sidebars
-require get_template_directory() . '/inc/register-sidebar.php';
+require get_template_directory() . '/inc/register-sidebars.php';
 
 // Remove lixo do head
 require get_template_directory() . '/inc/remove-junk-header.php';
