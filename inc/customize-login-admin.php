@@ -9,7 +9,7 @@ function btwp_change_admin_logo(){
     echo 
     '<style>
 	h1 a{
-	background-image:url('.get_bloginfo('template_directory').'/assets/images/logo-blank-theme-wp.jpg)!important;
+	background-image:url('.get_bloginfo('template_directory').'/assets/images/logotipos/logo-blank-theme-wp.jpg)!important;
 	width: 100% !important;
 	height: 110px !important;
 	background-size: 100% !important;

@@ -2,6 +2,11 @@
 
 > Tema em branco para acelerar o desenvolvimento de sites com WordPress
 
+<p align="center">
+    <img src="https://github.com/theandersonn/blank-theme-wp/blob/master/assets/images/banners/git-super-poderes.png" width="888" />
+</p>
+
+
 ## Características
 - Assets personalizado com [Gulp](https://github.com/theandersonn/gulp-bootstrap)	
 - Carregamento de estilos e scripts feito com wp_enqueue_scripts
