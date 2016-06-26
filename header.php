@@ -34,10 +34,10 @@
                     </div>
 
                     <!-- header menu html -->
-                    <?php get_template_part( 'template-parts/component', 'menu-html' ); ?>
+                    <?php //get_template_part( 'template-parts/component', 'menu-html' ); ?>
 
                     <!-- header menu -->
-                    <?php //if (function_exists('menu_header')) { menu_header(); } ?>                    
+                    <?php if (function_exists('menu_header')) { menu_header(); } ?>                    
                 </div>
             </nav>
         </header> 
