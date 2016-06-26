@@ -11,7 +11,7 @@ wp-snapshots/
 
 # THEME
 .sass-cache
-wp-content/themes/theme-name/gulp/node_modules/
+node_modules/
 
 # GLOBAL
 ._*
