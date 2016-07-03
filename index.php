@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); /* Template Name: Blog */ ?>
 
 <main class="main">
 	<div class="container">

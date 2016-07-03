@@ -1,7 +1,9 @@
 <?php
 
-//LIMITAR QUANTIDADE DE CARACTERES
-function changeSizeText($str, $n = 500, $end_char = '&#8230;'){
+/*--------------------------------------------------------------
+LIMIT NUMBER OF CHARACTERS
+--------------------------------------------------------------*/
+function changeTextSize($str, $n = 500, $end_char = '&#8230;'){
     if (strlen($str) < $n){
         return $str;
     }
@@ -23,8 +25,8 @@ function changeSizeText($str, $n = 500, $end_char = '&#8230;'){
     }
 }
 
-/* Exemplo de uso
-<?php $resumoNoticias = get_the_excerpt();
-echo changeSizeText( $resumoNoticias, 70 );
+/* How to use
+<?php $textResume = get_the_excerpt();
+echo changeTextSize( $textResume, 70 );
 ?>
 */
