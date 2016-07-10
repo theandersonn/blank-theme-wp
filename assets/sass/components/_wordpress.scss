@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-  IMAGENS
+  IMAGES
 --------------------------------------------------------------*/
 .alignleft,
 img.alignleft{
@@ -30,7 +30,7 @@ img.alignnone{
 }
 
 /* ----------------------------------------------
-  PAGINAÇÃO
+  PAGINATION
 ---------------------------------------------- */
 .pagination {
   font-size: 0;
@@ -97,7 +97,7 @@ blockquote:after{
 }
 
 /* ----------------------------------------------
-  COMENTÁRIOS
+  COMMENTS
 ---------------------------------------------- */
 .container-comments {
     width: 100%;
@@ -108,7 +108,9 @@ blockquote:after{
     font-size: 20px;
 }
 
-.comment-list {
+.comment-list,
+.children {
+    list-style: none;
     font-size: 15px;
 }
 
@@ -121,6 +123,11 @@ blockquote:after{
 .comment-list li img {
     float: left; 
     padding: 5px;
+}
+
+.reply,
+.nofollow {
+  margin-bottom: 10px;
 }
 
 #commentform label {
