@@ -81,7 +81,7 @@ function btwp_taxonomies_portfolio_category(){
 		'show_admin_column'		=> true
 	);
 
-	register_taxonomy('portfolio_category', 'portfolio', $args);
+	register_taxonomy('portfolio-category', 'portfolio', $args);
 }
 
 /*--------------------------------------------------------------
@@ -92,7 +92,7 @@ add_action( 'restrict_manage_posts', 'btwp_show_filter_portfolio_category' );
 function btwp_show_filter_portfolio_category() {
 	
 	global $typenow;
-	$taxonomy = 'portfolio_category';
+	$taxonomy = 'portfolio-category';
 
 	if( $typenow == 'portfolio' ){
 		$filters = array($taxonomy);
