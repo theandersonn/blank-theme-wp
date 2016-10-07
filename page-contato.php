@@ -14,8 +14,9 @@
 <main class="main">
     <div class="container">
         <div class="row">
-            <!-- THE DEFAULT LOOP -->
-            <?php get_template_part( 'template-parts/component', 'loop' ); ?>            
+            <div class="responsive-form clearfix">
+                <?php echo do_shortcode('[contact-form-7 id="" title=""]'); ?>
+            </div>             
         </div>
     </div>
 </main>
