@@ -6,11 +6,17 @@ require get_template_directory() . '/inc/add-theme-suport.php';
 // Limit number of characters
 require get_template_directory() . '/inc/change-text-size.php';
 
+// Custom Post Thumbnail
+require get_template_directory() . '/inc/custom-post-thumbnail.php';
+
 // Customiza o painel de login -> Logo, Título e url
 require get_template_directory() . '/inc/customize-login-admin.php';
 
 // Insere Google Analytics no Footer
 require get_template_directory() . '/inc/insert-googleanalytics.php';
+
+// Odin Thumbnail Resizer
+require get_template_directory() . '/classes/odinThumbnailResizer.php';
 
 // Insere Paginação
 require get_template_directory() . '/inc/insert-pagination.php';
@@ -22,7 +28,7 @@ require get_template_directory() . '/inc/insert-scripts-style.php';
 require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
 
 // Insere WP Bootstrap Navwalker
-require get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';
+require get_template_directory() . '/classes/wpBootstrapNavwalker.php';
 
 // Registra Post Type Portfolio (exemplo - deve ser modificado)
 require get_template_directory() . '/inc/register-cpt-portfolio.php';
