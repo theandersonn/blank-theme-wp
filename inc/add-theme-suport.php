@@ -1,11 +1,11 @@
 <?php
 /*--------------------------------------------------------------
-	INSERINDO TITLE NO HEAD
+	INSERE TITLE NO HEAD
 --------------------------------------------------------------*/
 add_theme_support( 'title-tag' );
 
 /*--------------------------------------------------------------
-	HABILITANDO IMAGENS DESTACADAS
+	HABILITA IMAGENS DESTACADAS
 --------------------------------------------------------------*/
 add_theme_support('post-thumbnails');
 // example: add_image_size( 'name-thump', width, height, true );
@@ -21,3 +21,17 @@ miniatura 	=>	360*173
 médio 		=>	768*370
 grande 		=> 	1360*655
 */
+
+/*--------------------------------------------------------------
+	REGISTRA SIDEBARS
+--------------------------------------------------------------*/
+// Barra Lateral
+register_sidebar(
+    array(
+    'name' => 'Barra lateral',
+    'id' => 'barra-lateral',
+    'before_widget' => '<div class="nome-estilo">',
+    'after_widget' => '</div>',
+    'description' => 'Widgets nesta área serão exibidos na barra lateral'
+    )
+);

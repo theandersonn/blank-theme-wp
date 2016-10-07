@@ -22,16 +22,13 @@ require get_template_directory() . '/inc/insert-scripts-style.php';
 require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
 
 // Insere WP Bootstrap Navwalker
-require get_template_directory() . '/inc/insert-wp-bootstrap-navwalker.php';
+require get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';
 
 // Registra Post Type Portfolio (exemplo - deve ser modificado)
 require get_template_directory() . '/inc/register-cpt-portfolio.php';
 
 // Cria a action Init e Registra Menus
 require get_template_directory() . '/inc/register-menus.php';
-
-// Registra Sidebars
-require get_template_directory() . '/inc/register-sidebars.php';
 
 // Remove lixo do head
 require get_template_directory() . '/inc/remove-junk-header.php';
