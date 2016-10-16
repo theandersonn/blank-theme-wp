@@ -30,9 +30,6 @@ require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
 // Insere WP Bootstrap Navwalker
 require get_template_directory() . '/classes/wpBootstrapNavwalker.php';
 
-// Registra Post Type Portfolio (exemplo - deve ser modificado)
-require get_template_directory() . '/inc/register-cpt-portfolio.php';
-
 // Cria a action Init e Registra Menus
 require get_template_directory() . '/inc/register-menus.php';
 
