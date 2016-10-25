@@ -16,7 +16,7 @@ require get_template_directory() . '/inc/customize-login-admin.php';
 require get_template_directory() . '/inc/insert-googleanalytics.php';
 
 // Odin Thumbnail Resizer
-require get_template_directory() . '/classes/odinThumbnailResizer.php';
+require get_template_directory() . '/classes/odin-thumbnail-resizer.php';
 
 // Insere Paginação
 require get_template_directory() . '/inc/insert-pagination.php';
@@ -28,7 +28,7 @@ require get_template_directory() . '/inc/insert-scripts-style.php';
 require get_template_directory() . '/inc/insert-thumbnail-admin-columns.php';
 
 // Insere WP Bootstrap Navwalker
-require get_template_directory() . '/classes/wpBootstrapNavwalker.php';
+require get_template_directory() . '/classes/wp-bootstrap-navwalker.php';
 
 // Cria a action Init e Registra Menus
 require get_template_directory() . '/inc/register-menus.php';
