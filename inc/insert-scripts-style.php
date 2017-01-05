@@ -11,21 +11,19 @@ function btwp_enqueue_scripts() {
 	wp_register_style('btwp-googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
 	wp_enqueue_style( 'btwp-googleFonts');
 
-	// Carrega icons da fonte dashicons
-	wp_enqueue_style( 'tema-css', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
-
-	// Carrega os estilos CSS - DESENVOLVIMENTO
-	wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/src/css/all.css');
-	
-	// Carrega os estilos CSS - FINAL
-	//wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/dist/css/all.min.css');
-
 	// Carrega jQuery nativo do WordPress
 	wp_enqueue_script('jquery');
 
+	// Carrega os estilos CSS - DESENVOLVIMENTO
+	wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/css/all.css');
+	
+	// Carrega os estilos CSS - FINAL
+	//wp_enqueue_style('all-css', get_stylesheet_directory_uri() . '/assets/css/all.min.css');
+
+
 	// Carrega scripts JS - DESENVOLVIMENTO
-	wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/src/js/all.js', array(), null, true);
+	wp_enqueue_script('all-js', get_stylesheet_directory_uri() . '/assets/js/all.js', array(), null, true);
 	
 	// Carrega scripts JS - FINAL
-	//wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/dist/js/all.min.js', array(), null, true);
+	//wp_enqueue_script('scripts-js', get_stylesheet_directory_uri() . '/assets/js/all.min.js', array(), null, true);
 }
