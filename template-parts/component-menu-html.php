@@ -1,4 +1,4 @@
-<div class="collapse navbar-collapse" id="menu-header-custom">
+<div class="collapse navbar-collapse" id="custom-collapse">
      <ul class="nav navbar-nav menu-header">
         <li><a href="#">Home</a></li>
         <li><a href="#">Company</a></li>
@@ -18,4 +18,4 @@
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact</a></li>  
     </ul>
-</div> 
+</div>
