@@ -1,19 +1,12 @@
 # Blank Theme WP
-
 > Tema em branco para acelerar o desenvolvimento de sites com WordPress
 
-<p align="center" style="display: block; margin-top: 50px;">
-    <img src="assets/images/banners/github-blank-theme-wp.png" width="888" />
-</p>
-
-
 ## Características
-- Assets personalizado com [Gulp Bootstrap](https://github.com/theandersonn/gulp-bootstrap)	
 - Carregamento de estilos e scripts feito com wp_enqueue_scripts
 - Exemplo de Custom Post Type 'portfolio' em funcionamento
 - Exibição de thumbnails nas colunas da dashboard
 - Functions modularizado
-- Inc - Grupo de funções personalizadas - detalhes ver [Wiki](https://github.com/theandersonn/blank-theme-wp/wiki) está sendo escrita
+- Inc - Grupo de funções personalizadas - detalhes ver [Wiki](https://github.com/theandersonn/blank-theme-wp/wiki)
 	- add-theme-suport
 	- change-text-size
 	- customize-login-admin
@@ -36,7 +29,6 @@
 - Trechos de códigos modularizados com get_template_part	
 
 ## Como contribuir
-
 1. Fork o repositório
 2. Crie uma nova branh para a sua funcionalidade: `git checkout -b nova-funcionalidade`
 3. Commit suas alterações: `git commit -m 'Add alguma funcionalidade'`

@@ -8,34 +8,11 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-        <!-- Replace with their styles -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <?php wp_head(); ?>
     </head>
-    
+
     <body>
         <!-- ### header ### -->
         <header class="header">
-             <nav class="navbar navbar-default">
-                  <div class="container">
-                       <div class="navbar-header">
-                            <!-- Hamburguer -->
-                            <button class="hamburguer navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#custom-collapse" aria-expanded="false">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <!-- Brand -->
-                            <a class="navbar-brand" href="<?php echo site_url(); ?>" title="<?php bloginfo( 'name' ); ?>">
-                                 <?php bloginfo( 'name' ); ?>
-                            </a>
-                       </div>
-                       
-                        <!-- header menu html -->
-                        <?php get_template_part( 'template-parts/component', 'menu-html' ); ?>                       
-                       
-                       <!-- Header Navigation -->
-                       <?php //if (function_exists('menu_header')) { menu_header(); } ?>                
-                   </div>  
-             </nav>
-        </header> 
+			header
+        </header>
