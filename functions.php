@@ -3,8 +3,8 @@
 // -------------------------------------------
 // CLASSES
 // -------------------------------------------
-require get_template_directory() . '/inc/classes/odin-thumbnail-resizer.php';
-require get_template_directory() . '/inc/classes/wp-bootstrap-navwalker.php';
+require get_template_directory() . '/inc/classes/class-odin-thumbnail-resizer.php';
+require get_template_directory() . '/inc/classes/class-wp-bootstrap-navwalker.php';
 
 // -------------------------------------------
 // FUNCTIONS
