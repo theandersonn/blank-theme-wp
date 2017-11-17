@@ -9,6 +9,7 @@ require get_template_directory() . '/inc/classes/wp-bootstrap-navwalker.php';
 // -------------------------------------------
 // FUNCTIONS
 // -------------------------------------------
+require get_template_directory() . '/inc/functions/add-comments-disqus.php';
 require get_template_directory() . '/inc/functions/add-googleanalytics.php';
 require get_template_directory() . '/inc/functions/add-pagination.php';
 require get_template_directory() . '/inc/functions/add-scripts-style.php';

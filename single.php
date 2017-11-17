@@ -6,10 +6,10 @@
 		    <!-- THE DEFAULT LOOP -->
 		    <?php get_template_part( 'template-parts/component', 'loop' ); ?>
 
-			<!-- COMMENTS -->
-			<?php get_template_part( 'template-parts/component', 'comments' ); ?>			
+			<!-- COMMENTS DISQUS -->
+            <?php disqus_embed('your-url-in-disqus'); ?>
 		</div>
 	</div>
-</main>	
+</main>
 
 <?php get_footer(); ?>

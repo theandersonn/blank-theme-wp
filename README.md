@@ -21,12 +21,12 @@
 	- remove-junk-header
 	- remove-theme-suport
 - Menu personalizado com [wp-bootstrap-navwalker](https://github.com/twittem/wp-bootstrap-navwalker)
-- Paginação de posts	
+- Paginação de posts
 - Registro de menus
 - Registro de sidebars
 - Tela de login preparada para ser customizada
 - Thumbnails habilitados
-- Trechos de códigos modularizados com get_template_part	
+- Trechos de códigos modularizados com get_template_part
 
 ## Como contribuir
 1. Fork o repositório
@@ -36,4 +36,4 @@
 5. Submit seu pull request :D
 
 ## Questões e Sugestões
-Se você tem alguma questão ou sugestão, abra uma [issue](https://github.com/theandersonn/blank-theme-wp/issues/new) e envie o seu feedback. 
+Se você tem alguma questão ou sugestão, abra uma [issue](https://github.com/theandersonn/blank-theme-wp/issues/new) e envie o seu feedback.
