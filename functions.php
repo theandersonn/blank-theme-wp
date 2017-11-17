@@ -38,3 +38,6 @@ require get_template_directory() . '/inc/remove-junk-header.php';
 
 // Desabilita funcionalidades do tema
 require get_template_directory() . '/inc/remove-theme-suport.php';
+
+// Envia email notificando revisão de post
+require get_template_directory() . '/inc/send-mail-post-pending.php';
