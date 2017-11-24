@@ -8,7 +8,10 @@ add_action('wp_enqueue_scripts', 'btwp_enqueue_scripts');
 function btwp_enqueue_scripts() {
 
 	// Carrega jQuery nativo do WordPress
-	wp_enqueue_script('jquery');
+    wp_dequeue_script('jquery');
+    wp_enqueue_script('jquery', false, array(), false, true);
+    wp_enqueue_script('jquery-core', false, array(), false, true);
+    wp_enqueue_script('jquery-migrate', false, array(), false, true);
 
 	// Carrega fontes do google
 	wp_register_style('btwp-googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
