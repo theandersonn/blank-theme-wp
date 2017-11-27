@@ -1,28 +1,5 @@
 <?php
 /*--------------------------------------------------------------
-    HIDE ACF MENU ITEM FROM THE ADMIN MENU
---------------------------------------------------------------*/
-// add_action( 'admin_menu', 'btwp_hide_acf_menu', 999 );
-
-// function btwp_hide_acf_menu(){
-
-//     // users can view the menu
-//     $admins = array(
-//         'name-admin'
-//     );
-
-//     // get the current user
-//     $current_user = wp_get_current_user();
-
-//     // match and remove if needed
-//     if( !in_array( $current_user->user_login, $admins ) )
-//     {
-//         remove_menu_page('edit.php?post_type=acf');
-//     }
-
-// }
-
-/*--------------------------------------------------------------
     HIDE USERNAMES FROM COMMENT CLASS
 --------------------------------------------------------------*/
 add_filter('comment_class', 'btwp_true_completely_remove_css_class');
@@ -53,3 +30,15 @@ function btwp_remove_max_srcset_image_width( $max_width ) {
 --------------------------------------------------------------*/
 add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
+
+/*--------------------------------------------------------------
+    REMOVE VERSION CSS AND JS
+--------------------------------------------------------------*/
+add_filter( 'style_loader_src', 'btwp_remove_version_css_js', 9999 );
+add_filter( 'script_loader_src', 'btwp_remove_version_css_js', 9999 );
+
+function btwp_remove_version_css_js( $src ) {
+	if ( strpos( $src, 'ver=' ) )
+		$src = remove_query_arg( 'ver', $src );
+	return $src;
+}
