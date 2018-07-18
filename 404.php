@@ -2,7 +2,7 @@
 
 <main class="main">
 	<div class="container">
-		<div class="row not-found">
+		<div class="row">
 			<div>
 				<strong>404</strong>
 			</div>

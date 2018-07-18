@@ -10,22 +10,21 @@
     // -------------------------------------------
     // classes
     // -------------------------------------------
-    require $btwp_template_directory . '/includes/classes/class-odin-thumbnail-resizer.php';
-    require $btwp_template_directory . '/includes/classes/class-wp-bootstrap-navwalker.php';
+    require $btwp_template_directory . '/_inc/classes/class-odin-thumbnail-resizer.php';
+    require $btwp_template_directory . '/_inc/classes/class-wp-bootstrap-navwalker.php';
 
     // -------------------------------------------
     // functions
     // -------------------------------------------
-    require $btwp_template_directory . '/includes/functions/add-comments-disqus.php';
-    require $btwp_template_directory . '/includes/functions/add-googleanalytics.php';
-    require $btwp_template_directory . '/includes/functions/add-pagination.php';
-    require $btwp_template_directory . '/includes/functions/add-scripts-style.php';
-    require $btwp_template_directory . '/includes/functions/add-thumbnail-admin-columns.php';
-    require $btwp_template_directory . '/includes/functions/add-theme-suport.php';
-    require $btwp_template_directory . '/includes/functions/change-text-size.php';
-    require $btwp_template_directory . '/includes/functions/custom-post-thumbnail.php';
-    require $btwp_template_directory . '/includes/functions/customize-login-admin.php';
-    require $btwp_template_directory . '/includes/functions/register-menus.php';
-    require $btwp_template_directory . '/includes/functions/remove-junk-header.php';
-    require $btwp_template_directory . '/includes/functions/remove-theme-suport.php';
-    require $btwp_template_directory . '/includes/functions/send-mail-post-pending.php';
+    require $btwp_template_directory . '/_inc/functions/add-comments-disqus.php';
+    require $btwp_template_directory . '/_inc/functions/add-googleanalytics.php';
+    require $btwp_template_directory . '/_inc/functions/add-pagination.php';
+    require $btwp_template_directory . '/_inc/functions/add-scripts-style.php';
+    require $btwp_template_directory . '/_inc/functions/add-thumbnail-admin-columns.php';
+    require $btwp_template_directory . '/_inc/functions/add-theme-suport.php';
+    require $btwp_template_directory . '/_inc/functions/change-text-size.php';
+    require $btwp_template_directory . '/_inc/functions/custom-post-thumbnail.php';
+    require $btwp_template_directory . '/_inc/functions/customize-login-admin.php';
+    require $btwp_template_directory . '/_inc/functions/register-menus.php';
+    require $btwp_template_directory . '/_inc/functions/remove-theme-suport.php';
+    require $btwp_template_directory . '/_inc/functions/send-mail-post-pending.php';

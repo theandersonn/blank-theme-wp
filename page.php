@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 		    <!-- THE DEFAULT LOOP -->
-		    <?php get_template_part( 'template-parts/component', 'loop' ); ?>			
+		    <?php get_template_part( '_parts/component', 'loop' ); ?>			
 		</div>
 	</div>
 </main>
