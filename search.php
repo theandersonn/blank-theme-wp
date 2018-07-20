@@ -5,14 +5,22 @@
 		<div class="row">
 		    <h2>Resultado da busca pelo termo '<?php echo esc_html ( get_query_var('s') ); ?>'</h2>
 
-		    <!-- THE DEFAULT LOOP -->
-		    <?php get_template_part( '_parts/component', 'loop' ); ?>
+			<?php 
+				if( have_posts() ) : 
+					while( have_posts() ) : 
+						the_post();
+							get_template_part( 'template-parts/post/content', 'post' );
+						endwhile; 
+				else : 
+					echo '<p>Nenhum conteúdo encontrado.</p>';
+				endif;
+			?>	
 
 		    <!-- GET PAGINATION -->
 		    <?php //btwp_pagination(); ?>
 
 		    <!-- PAGINATION HTML -->
-		    <?php get_template_part( '_parts/component', 'pagination-html' ); ?>			
+		    <?php get_template_part( 'template-parts/navigation/pagination', 'html' ); ?>				
 		</div>
 	</div>
 </main>

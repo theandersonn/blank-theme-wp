@@ -1,9 +1,8 @@
+
         <footer class="footer">
             <div class="container">
                 <div class="row text-center">
-                    <span>Copyright &copy; <?php echo date( 'Y' ); ?>
-                        <a href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a>
-                    </span>
+                    <?php get_template_part( 'template-parts/footer/site', 'info' ); ?>
                 </div>
             </div>
         </footer>

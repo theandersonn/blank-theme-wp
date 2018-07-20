@@ -3,8 +3,12 @@
 <main class="main">
 	<div class="container">
 		<div class="row">
-		    <!-- THE DEFAULT LOOP -->
-		    <?php get_template_part( '_parts/component', 'loop' ); ?>			
+        	<?php
+	            while ( have_posts() ) :
+	            	the_post();
+	            		get_template_part( 'template-parts/page/content', 'page' );	
+	            endwhile; 
+	        ?>
 		</div>
 	</div>
 </main>

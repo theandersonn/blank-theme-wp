@@ -1,3 +1,3 @@
 <aside>
-    <?php dynamic_sidebar('barra-lateral'); ?>
+    <?php dynamic_sidebar('side-bar'); ?>
 </aside>
