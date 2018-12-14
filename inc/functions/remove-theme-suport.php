@@ -1,26 +1,18 @@
 <?php
 /*--------------------------------------------------------------
-	REMOVE LIXO DO HEAD
+	remove junk head
 --------------------------------------------------------------*/
-remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'index_rel_link');
 remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
-remove_action('wp_head', 'wp_resource_hints', 2);
+remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-remove_action('wp_head','rest_output_link_wp_head');
-remove_action('wp_head','wp_oembed_add_discovery_links');
-remove_action('template_redirect', 'rest_output_link_header', 11, 0 );
-add_filter('rest_enabled', '_return_false');
-
 /*---------------------------------------------------------------------
 	disable emojis
 ---------------------------------------------------------------------*/
@@ -54,13 +46,4 @@ function btwp_remove_recent_comments_style() {
 add_filter( 'max_srcset_image_width', 'btwp_remove_max_srcset_image_width' );
 function btwp_remove_max_srcset_image_width( $max_width ) {
     return false;
-}
-
-/*---------------------------------------------------------------------
-    remove wp-embed
----------------------------------------------------------------------*/
-//read more: codex.wordpress.org/Embeds
-add_action( 'wp_footer', 'my_deregister_scripts' );
-function my_deregister_scripts(){
-  wp_deregister_script( 'wp-embed' );
 }
