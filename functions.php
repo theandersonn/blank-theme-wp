@@ -5,14 +5,13 @@
         die( '-1' );
     }
 
-    $btwp_dir_class     = get_template_directory() . '/inc/classes';
-    $btwp_dir_function  = get_template_directory() . '/inc/functions';
+    $btwp_dir_class     = get_template_directory() . '/includes/classes';
+    $btwp_dir_function  = get_template_directory() . '/includes/functions';
 
     // -------------------------------------------
     // classes
     // -------------------------------------------
     require $btwp_dir_class . '/class-odin-thumbnail-resizer.php';
-    require $btwp_dir_class . '/class-wp-bootstrap-navwalker.php';
 
     // -------------------------------------------
     // functions
@@ -26,10 +25,7 @@
     require $btwp_dir_function . '/custom-post-thumbnail.php';
     require $btwp_dir_function . '/custom-login-admin.php';
 
-    require $btwp_dir_function . '/limit-description-size.php';
     require $btwp_dir_function . '/load-scripts-style.php';
 
     require $btwp_dir_function . '/register-menus.php';
     require $btwp_dir_function . '/remove-theme-suport.php';
-
-    require $btwp_dir_function . '/send-mail-post-pending.php';
