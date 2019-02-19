@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <!-- ### header ### -->
-        <header class="header">
-            <?php get_template_part( 'template-parts/site', 'branding' ); ?>
+
+        <header>
+
         </header>

@@ -1,31 +1,27 @@
 <?php
 
-    // prevent file from being loaded directly
+    // Prevent file from being loaded directly
     if ( ! defined( 'ABSPATH' ) ) {
         die( '-1' );
     }
 
-    $btwp_dir_class     = get_template_directory() . '/includes/classes';
-    $btwp_dir_function  = get_template_directory() . '/includes/functions';
+    // -------------------------------------------
+    // Classes
+    // -------------------------------------------
+    get_template_directory() . '/includes/classes/class-odin-thumbnail-resizer.php';
 
     // -------------------------------------------
-    // classes
+    // Functions
     // -------------------------------------------
-    require $btwp_dir_class . '/class-odin-thumbnail-resizer.php';
+    require get_template_directory() . '/includes/functions/add-google-analytics.php';
+    require get_template_directory() . '/includes/functions/add-pagination.php';
+    require get_template_directory() . '/includes/functions/add-thumbnail-admin-columns.php';
+    require get_template_directory() . '/includes/functions/add-theme-suport.php';
 
-    // -------------------------------------------
-    // functions
-    // -------------------------------------------
-    require $btwp_dir_function . '/add-comments-disqus.php';
-    require $btwp_dir_function . '/add-google-analytics.php';
-    require $btwp_dir_function . '/add-pagination.php';
-    require $btwp_dir_function . '/add-thumbnail-admin-columns.php';
-    require $btwp_dir_function . '/add-theme-suport.php';
+    require get_template_directory() . '/includes/functions/custom-post-thumbnail.php';
+    require get_template_directory() . '/includes/functions/custom-login-admin.php';
 
-    require $btwp_dir_function . '/custom-post-thumbnail.php';
-    require $btwp_dir_function . '/custom-login-admin.php';
+    require get_template_directory() . '/includes/functions/load-scripts-style.php';
 
-    require $btwp_dir_function . '/load-scripts-style.php';
-
-    require $btwp_dir_function . '/register-menus.php';
-    require $btwp_dir_function . '/remove-theme-suport.php';
+    require get_template_directory() . '/includes/functions/register-menus.php';
+    require get_template_directory() . '/includes/functions/remove-theme-suport.php';

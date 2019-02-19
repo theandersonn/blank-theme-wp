@@ -20,15 +20,16 @@ function menu_header(){
         array(
             // identificação do menu
             'menu'              => 'Menu header',
+            // localização do menu
             'theme_location'    => 'menu-header',
             // níveis de hierarquia do menu
             'depth'             => 2,
-            // container gerado pelo WordPress
+            // container para envolver o menu
             'container'         => false,
-            // id referencia javascript
+            // id do menu
             'container_id'      => '',
-            // aplica estilo desenvolvido para o menu
-            'menu_class'        => '',
+            // class do menu
+            'menu_class'        => ''
         )
     );
 }
@@ -38,15 +39,16 @@ function menu_footer(){
         array(
             // identificação do menu
             'menu'              => 'Menu footer',
+            // localização do menu
             'theme_location'    => 'menu-footer',
-            // remove container gerado pelo WP
-            'container'         => false,
-            // aplica estilo desenvolvido para o menu
-            'menu_class'        => '',
-            // caso não tenha menu para esta área, não é exibido nada
-            'fallback_cb'       => '',
             // níveis de hierarquia do menu
-            'depth'             => 1
+            'depth'             => 1,            
+            // container para envolver o menu
+            'container'         => false,
+            // id do menu
+            'container_id'      => '',            
+            // aplica estilo desenvolvido para o menu
+            'menu_class'        => ''
         )
     );
 }
